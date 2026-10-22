@@ -7,7 +7,7 @@ export interface InquiryPayload {
   files: File[]
 }
 
-const ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT?.trim() ?? ''
+const ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT?.trim() || 'https://formsubmit.co/ajax/ivan.susac35@gmail.com'
 
 export const isDemoMode = !ENDPOINT
 
