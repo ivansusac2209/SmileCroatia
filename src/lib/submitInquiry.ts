@@ -31,6 +31,9 @@ export async function submitInquiry({ details, needs, files }: InquiryPayload): 
   form.append('message', details.message)
   form.append('dental_needs', needs)
   form.append('_subject', `New inquiry from ${details.fullName}`)
+  // FormSubmit options: skip its captcha page, send a table-formatted email
+  form.append('_captcha', 'false')
+  form.append('_template', 'table')
   files.forEach((file) => form.append('attachments', file, file.name))
 
   if (isDemoMode) {

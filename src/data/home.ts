@@ -16,20 +16,20 @@ export const trustBadges: IconText[] = [
 
 export const steps = [
   {
-    image: '/images/step-upload.svg',
+    image: '/images/step-upload.jpg',
     alt: 'Dentist examining a smiling patient',
     title: '1. Upload Your Plan',
     text: 'Send us your dental plan or describe your needs. It only takes a few minutes.',
   },
   {
-    image: '/images/step-offer.svg',
-    alt: 'Dental X-ray shown on a laptop',
+    image: '/images/step-offer.jpg',
+    alt: 'Dental X-ray shown on a clinic monitor',
     title: '2. Get a Personalized Offer',
     text: 'Our partner clinic reviews your case and we send you a detailed treatment plan and package options.',
   },
   {
-    image: '/images/step-travel.svg',
-    alt: 'Couple looking over a Croatian old town by the sea',
+    image: '/images/step-travel.jpg',
+    alt: 'Two travellers looking over an old town by the sea',
     title: '3. Travel & Smile',
     text: 'We organize your stay, transfers and appointments — you just enjoy the experience.',
   },
@@ -55,22 +55,22 @@ export const packages: Package[] = [
   {
     title: 'Dental Crowns Package',
     price: 'From €2,800',
-    image: '/images/package-crowns.svg',
-    alt: 'Row of ceramic dental crowns',
+    image: '/images/package-crowns.jpg',
+    alt: 'Ceramic dental crowns on a model',
     badge: 'Popular',
     features: ['High-quality ceramic crowns', 'Clinic appointments', 'Hotel accommodation (optional)', 'Local transfers'],
   },
   {
     title: 'Dental Implants Package',
     price: 'From €4,500',
-    image: '/images/package-implants.svg',
-    alt: 'Dental implant model',
+    image: '/images/package-implants.jpg',
+    alt: 'Dentist demonstrating a dental implant on a model',
     features: ['Implant placement and crown', '3–5 day stay (depending on plan)', 'Hotel accommodation (optional)', 'Local transfers'],
   },
   {
     title: 'Full Smile Makeover',
     price: 'Custom quote',
-    image: '/images/package-makeover.svg',
+    image: '/images/package-makeover.jpg',
     alt: 'Model of a full set of teeth',
     features: ['Individual treatment plan', 'Premium materials', 'Personalized travel support', 'Flexible stay options'],
   },

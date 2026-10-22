@@ -22,25 +22,27 @@ Requires Node 20+.
 | `src/data/home.ts` | All homepage text, stats and package prices |
 | `src/lib/submitInquiry.ts` | Sends the inquiry to the form service |
 | `src/style.css` | Design tokens (colours, fonts) |
-| `public/images/` | Placeholder images — replace with real photos, keeping the file names (or update paths in `src/data/home.ts` / `HeroSection.vue`) |
+| `public/images/` | Unsplash photos (credits in `IMAGES.md`); earlier drawn versions in `public/images/illustrations/` |
 
 ## Connecting the inquiry email
 
-The inbox is not set yet, so the form runs in **demo mode**: it shows the confirmation page but sends nothing
-(the payload is logged to the browser console).
-
-To go live, create a form at a form service that supports file uploads (e.g. Formspree, Basin), point it to the
-clinic inbox, then set its endpoint URL:
+Inquiries are sent with [FormSubmit](https://formsubmit.co) (no account needed) to **ivan.susac35@gmail.com**.
+The endpoint is set in `.env` (not committed):
 
 ```bash
 cp .env.example .env
 # edit .env:
-VITE_FORM_ENDPOINT=https://formspree.io/f/xxxxxxx
+VITE_FORM_ENDPOINT=https://formsubmit.co/ajax/ivan.susac35@gmail.com
 ```
+
+The **first submission** triggers a one-time activation email to that inbox; click the link in it, otherwise no
+inquiries are delivered. Without `VITE_FORM_ENDPOINT` the form runs in **demo mode**: it shows the confirmation page
+but sends nothing (the payload is logged to the browser console).
 
 Rebuild after changing it (on Netlify/Cloudflare Pages, set it as an environment variable instead).
 The form posts `multipart/form-data` with fields `name`, `email`, `phone`, `country`, `preferred_contact`,
-`message`, `dental_needs`, `_subject` and files under `attachments`.
+`message`, `dental_needs`, `_subject`, the FormSubmit options `_captcha` and `_template`, and files under
+`attachments`.
 
 ## Deploying
 

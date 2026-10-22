@@ -8,7 +8,7 @@ import { trustBadges } from '@/data/home'
   <section class="relative overflow-hidden bg-surface">
     <!-- Photo: stacked on top for mobile, right-hand backdrop from lg up -->
     <div class="relative h-64 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[58%]">
-      <img src="/images/hero.svg" alt="Smiling woman on a terrace above the Dubrovnik coast" class="h-full w-full object-cover" fetchpriority="high" />
+      <img src="/images/hero.jpg" alt="Woman looking over the old town of Dubrovnik" class="h-full w-full object-cover" fetchpriority="high" />
       <div class="absolute inset-0 hidden bg-gradient-to-r from-surface via-surface/40 to-transparent lg:block" />
       <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface to-transparent lg:hidden" />
     </div>
