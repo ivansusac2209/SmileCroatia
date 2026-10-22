@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef3f7"/><stop offset="1" stop-color="#d7e3ec"/></linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1c9a8"/><stop offset="1" stop-color="#d9a37f"/></linearGradient>
+  <linearGradient id="skin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c99470"/><stop offset="1" stop-color="#a87352"/></linearGradient>
+</defs>
+<rect width="800" height="520" fill="url(#bg)"/>
+<!-- window -->
+<rect x="470" y="40" width="280" height="200" rx="8" fill="#bcd8ea"/><path d="M610 40v200M470 140h280" stroke="#fff" stroke-width="8"/>
+<path d="M470 210 Q560 180 640 200 T750 190 V240 H470Z" fill="#6aa6c8" opacity=".6"/>
+<!-- lamp -->
+<path d="M120 0 V60" stroke="#8a94a3" stroke-width="6"/><ellipse cx="120" cy="80" rx="70" ry="26" fill="#f7f7f5" stroke="#c9d1da" stroke-width="4"/>
+<path d="M60 92 L20 300 L240 300 L180 92Z" fill="#fff8e1" opacity=".35"/>
+<!-- dental chair -->
+<path d="M120 400 Q160 300 300 300 L520 330 Q560 340 560 380 L540 410 L140 420Z" fill="#14273d"/>
+<rect x="300" y="420" width="40" height="70" fill="#5b6676"/><rect x="240" y="480" width="160" height="20" rx="10" fill="#5b6676"/>
+<!-- patient lying -->
+<g>
+  <path d="M220 330 Q300 300 420 320 L520 340 L520 380 L220 380Z" fill="#7fa7c6"/>
+  <circle cx="200" cy="320" r="46" fill="url(#skin)"/>
+  <path d="M160 300 Q170 260 214 268 Q246 276 240 300 Q210 286 160 300Z" fill="#3e2616"/>
+  <path d="M178 336 Q200 352 222 336" stroke="#b5574d" stroke-width="5" fill="#fff"/>
+  <path d="M178 312 q8 6 16 0M208 310 q8 6 16 0" stroke="#4a2e1c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="150" y="360" width="120" height="20" rx="8" fill="#a7d3e8"/>
+</g>
+<!-- dentist -->
+<g transform="translate(300 90)">
+  <path d="M40 330 Q40 170 120 150 L200 150 Q280 170 280 330Z" fill="#ffffff" stroke="#d6dbe2" stroke-width="4"/>
+  <path d="M130 150 L160 210 L190 150" fill="#5aa1c4"/>
+  <rect x="140" y="110" width="40" height="50" fill="url(#skin2)"/>
+  <circle cx="160" cy="80" r="56" fill="url(#skin2)"/>
+  <path d="M104 72 Q110 20 164 22 Q216 26 216 76 Q190 50 160 50 Q128 52 104 72Z" fill="#1b1410"/>
+  <rect x="112" y="88" width="96" height="44" rx="18" fill="#cfe7f2"/>
+  <path d="M112 100 L100 92 M208 100 L220 92" stroke="#cfe7f2" stroke-width="4"/>
+  <circle cx="140" cy="74" r="5" fill="#1b1410"/><circle cx="180" cy="74" r="5" fill="#1b1410"/>
+  <path d="M60 220 Q20 260 -60 240" stroke="#ffffff" stroke-width="40" stroke-linecap="round" fill="none"/>
+  <circle cx="-70" cy="238" r="20" fill="#cfe7f2"/>
+  <path d="M-88 236 L-120 230" stroke="#8a94a3" stroke-width="5" stroke-linecap="round"/>
+  <rect x="210" y="200" width="44" height="6" fill="#1d3550"/>
+</g>
+<!-- tray -->
+<rect x="590" y="330" width="150" height="14" rx="4" fill="#c9d1da"/><path d="M665 344 V500" stroke="#8a94a3" stroke-width="6"/>
+<g stroke="#5b6676" stroke-width="4" stroke-linecap="round"><path d="M610 324h40M660 324h50"/></g>
+<!-- plant -->
+<rect x="30" y="430" width="56" height="70" rx="6" fill="#e9d7b9"/><g fill="#5f7a5c"><ellipse cx="44" cy="410" rx="14" ry="34"/><ellipse cx="72" cy="404" rx="14" ry="40"/><ellipse cx="58" cy="396" rx="12" ry="44"/></g>
+</svg>

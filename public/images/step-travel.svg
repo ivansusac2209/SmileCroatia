@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4c79c"/><stop offset=".5" stop-color="#f7e2c6"/><stop offset="1" stop-color="#cfe2ec"/></linearGradient>
+  <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c94b8"/><stop offset="1" stop-color="#245f84"/></linearGradient>
+</defs>
+<rect width="800" height="520" fill="url(#sky)"/>
+<circle cx="600" cy="150" r="54" fill="#fff3d6" opacity=".9"/>
+<rect y="250" width="800" height="270" fill="url(#sea)"/>
+<path d="M0 255 Q120 238 240 250 T520 246 T800 252 V262 H0Z" fill="#8aa9b8"/>
+<g stroke="#cfe6f1" stroke-width="2" opacity=".5"><path d="M560 300h80M620 330h60M520 360h70"/></g>
+<!-- old town -->
+<g>
+  <path d="M60 330 L80 250 L520 250 L560 340Z" fill="#d6bd96"/>
+  <g fill="#f1e2c7">
+    <rect x="90" y="214" width="60" height="50"/><rect x="156" y="200" width="76" height="64"/><rect x="238" y="222" width="54" height="44"/><rect x="298" y="206" width="70" height="60"/><rect x="374" y="218" width="58" height="48"/><rect x="438" y="208" width="66" height="58"/>
+  </g>
+  <g fill="#c8633f">
+    <path d="M86 214 l34-28 34 28z"/><path d="M152 200 l42-34 42 34z"/><path d="M234 222 l31-24 31 24z"/><path d="M294 206 l39-32 39 32z"/><path d="M370 218 l33-26 33 26z"/><path d="M434 208 l37-30 37 30z"/>
+  </g>
+  <rect x="268" y="150" width="30" height="110" fill="#ead8b8"/><path d="M264 150h38l-19-30z" fill="#b8573a"/>
+  <g fill="#c99a6a"><rect x="104" y="230" width="8" height="12"/><rect x="128" y="230" width="8" height="12"/><rect x="176" y="220" width="8" height="12"/><rect x="206" y="220" width="8" height="12"/><rect x="318" y="224" width="8" height="12"/><rect x="346" y="224" width="8" height="12"/><rect x="458" y="226" width="8" height="12"/><rect x="484" y="226" width="8" height="12"/></g>
+  <path d="M50 340 L70 260 L80 260 L64 340Z M540 340 L516 260 L528 260 L556 340Z" fill="#c4a87f"/>
+</g>
+<!-- foreground hill -->
+<path d="M0 400 Q200 360 420 390 Q620 420 800 380 V520 H0Z" fill="#6f8a5e"/>
+<path d="M0 450 Q260 420 520 450 T800 440 V520 H0Z" fill="#56704a"/>
+<!-- couple (from behind) -->
+<g transform="translate(560 300)">
+  <!-- man -->
+  <rect x="20" y="150" width="22" height="80" fill="#1d3550"/><rect x="48" y="150" width="22" height="80" fill="#1d3550"/>
+  <path d="M8 160 Q4 80 44 70 Q84 80 82 160Z" fill="#5aa1c4"/>
+  <circle cx="44" cy="48" r="26" fill="#c99470"/><path d="M18 46 Q20 18 44 18 Q70 18 70 46 Q60 30 44 30 Q28 30 18 46Z" fill="#2a1a10"/>
+  <path d="M18 46 Q22 66 44 70 Q66 66 70 46 Q68 74 44 76 Q20 74 18 46Z" fill="#2a1a10"/>
+  <!-- arm around -->
+  <path d="M80 100 Q110 92 128 110" stroke="#5aa1c4" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <!-- woman -->
+  <rect x="106" y="160" width="18" height="70" fill="#d9a37f"/><rect x="130" y="160" width="18" height="70" fill="#d9a37f"/>
+  <path d="M96 170 Q96 92 126 86 Q158 92 158 170Z" fill="#ffffff"/>
+  <path d="M96 170 L88 196 L166 196 L158 170Z" fill="#e7b13c"/>
+  <circle cx="127" cy="66" r="23" fill="#d9a37f"/>
+  <path d="M102 64 Q102 38 127 38 Q152 38 152 64 Q156 110 140 124 Q127 100 114 124 Q98 110 102 64Z" fill="#6b4429"/>
+  <ellipse cx="127" cy="44" rx="40" ry="10" fill="#e9d7b9"/><ellipse cx="127" cy="38" rx="20" ry="12" fill="#e9d7b9"/><path d="M108 42 h38" stroke="#14273d" stroke-width="4"/>
+</g>
+<!-- olive tree -->
+<g transform="translate(20 260)"><path d="M70 200 Q60 120 90 80" stroke="#5c4a36" stroke-width="12" fill="none"/><g fill="#7f9a6c"><circle cx="90" cy="70" r="40"/><circle cx="50" cy="90" r="32"/><circle cx="130" cy="88" r="30"/></g><g fill="#93ad7e" opacity=".8"><circle cx="80" cy="56" r="18"/><circle cx="118" cy="76" r="14"/></g></g>
+<!-- sailboat -->
+<g transform="translate(640 270)"><path d="M0 22 h60 l-10 12 h-40z" fill="#fff"/><path d="M30 20 V-30 L56 18Z" fill="#fff"/><path d="M28 20 V-20 L8 18Z" fill="#f2f2f2"/></g>
+</svg>

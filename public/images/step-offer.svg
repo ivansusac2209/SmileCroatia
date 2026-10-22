@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4efe7"/><stop offset="1" stop-color="#e2d8c9"/></linearGradient>
+  <radialGradient id="xr" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#2a3d52"/><stop offset="1" stop-color="#0b1622"/></radialGradient>
+</defs>
+<rect width="800" height="520" fill="url(#bg)"/>
+<!-- desk -->
+<rect y="400" width="800" height="120" fill="#b88e66"/><rect y="400" width="800" height="10" fill="#a47b55"/>
+<!-- laptop -->
+<g transform="translate(150 70)">
+  <rect x="0" y="0" width="500" height="320" rx="16" fill="#1b2a3a"/>
+  <rect x="16" y="16" width="468" height="288" rx="6" fill="url(#xr)"/>
+  <!-- panoramic xray -->
+  <g fill="none" stroke="#c9dbe8" stroke-linecap="round">
+    <path d="M70 140 Q250 60 430 140" stroke-width="3" opacity=".3"/>
+    <path d="M70 200 Q250 290 430 200" stroke-width="3" opacity=".3"/>
+  </g>
+  <g fill="#e8f0f6" opacity=".88">
+    <!-- upper teeth -->
+    <rect x="96" y="118" width="22" height="46" rx="8"/><rect x="122" y="108" width="24" height="54" rx="9"/><rect x="150" y="100" width="24" height="60" rx="9"/><rect x="178" y="96" width="20" height="62" rx="8"/><rect x="202" y="94" width="20" height="64" rx="8"/><rect x="226" y="92" width="22" height="66" rx="8"/><rect x="252" y="92" width="22" height="66" rx="8"/><rect x="278" y="94" width="20" height="64" rx="8"/><rect x="302" y="96" width="20" height="62" rx="8"/><rect x="326" y="100" width="24" height="60" rx="9"/><rect x="354" y="108" width="24" height="54" rx="9"/><rect x="382" y="118" width="22" height="46" rx="8"/>
+    <!-- lower teeth -->
+    <rect x="100" y="178" width="22" height="48" rx="8"/><rect x="126" y="180" width="24" height="54" rx="9"/><rect x="154" y="182" width="22" height="58" rx="8"/><rect x="180" y="184" width="20" height="60" rx="8"/><rect x="204" y="184" width="20" height="62" rx="8"/><rect x="228" y="184" width="20" height="62" rx="8"/><rect x="252" y="184" width="20" height="62" rx="8"/><rect x="276" y="184" width="20" height="62" rx="8"/><rect x="300" y="184" width="20" height="60" rx="8"/><rect x="324" y="182" width="22" height="58" rx="8"/><rect x="350" y="180" width="24" height="54" rx="9"/><rect x="378" y="178" width="22" height="48" rx="8"/>
+  </g>
+  <!-- implant highlight -->
+  <rect x="352" y="182" width="26" height="60" rx="4" fill="#ffffff"/><g stroke="#8fb3cc" stroke-width="2"><path d="M354 200h22M354 212h22M354 224h22"/></g>
+  <circle cx="365" cy="212" r="44" fill="none" stroke="#3f9b6b" stroke-width="3" stroke-dasharray="8 6"/>
+  <!-- ui sidebar -->
+  <rect x="16" y="16" width="468" height="26" fill="#14273d"/><g fill="#5b6676"><circle cx="34" cy="29" r="5"/><circle cx="50" cy="29" r="5"/><circle cx="66" cy="29" r="5"/></g>
+  <rect x="330" y="252" width="140" height="40" rx="8" fill="#14273d" opacity=".9"/><rect x="342" y="262" width="80" height="6" rx="3" fill="#e7b13c"/><rect x="342" y="276" width="110" height="5" rx="2" fill="#8a94a3"/>
+  <!-- base -->
+  <path d="M-40 320 H540 L560 344 H-60Z" fill="#c9d1da"/><rect x="200" y="320" width="100" height="8" rx="4" fill="#8a94a3"/>
+</g>
+<!-- treatment plan paper -->
+<g transform="translate(590 300) rotate(8)">
+  <rect width="160" height="200" rx="6" fill="#fff" stroke="#e2e5ea" stroke-width="2"/>
+  <rect x="18" y="20" width="90" height="10" rx="4" fill="#14273d"/>
+  <g fill="#c9d1da"><rect x="18" y="46" width="124" height="6" rx="3"/><rect x="18" y="62" width="110" height="6" rx="3"/><rect x="18" y="78" width="120" height="6" rx="3"/><rect x="18" y="94" width="96" height="6" rx="3"/></g>
+  <circle cx="30" cy="130" r="9" fill="#e3f2e9"/><path d="M25 130l4 4 7-8" stroke="#3f9b6b" stroke-width="3" fill="none"/>
+  <rect x="48" y="126" width="80" height="6" rx="3" fill="#c9d1da"/>
+</g>
+<!-- coffee -->
+<g transform="translate(60 330)"><rect width="60" height="70" rx="8" fill="#ffffff" stroke="#d6dbe2" stroke-width="3"/><path d="M60 18 q26 0 26 22 t-26 20" stroke="#d6dbe2" stroke-width="6" fill="none"/><ellipse cx="30" cy="6" rx="26" ry="6" fill="#6b4429"/></g>
+</svg>

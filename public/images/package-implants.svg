@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d3550"/><stop offset="1" stop-color="#0f1f33"/></linearGradient>
+  <linearGradient id="tooth" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f4f2ec"/><stop offset="1" stop-color="#d8d2c4"/></linearGradient>
+  <linearGradient id="ti" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d8794"/><stop offset=".45" stop-color="#e6ebf0"/><stop offset="1" stop-color="#6e7884"/></linearGradient>
+  <linearGradient id="gum" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e79a9a"/><stop offset="1" stop-color="#c96f72"/></linearGradient>
+  <radialGradient id="glow" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#5aa1c4" stop-opacity=".45"/><stop offset="1" stop-color="#5aa1c4" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="400" fill="url(#bg)"/>
+<ellipse cx="400" cy="200" rx="300" ry="190" fill="url(#glow)"/>
+<!-- grid lines -->
+<g stroke="#ffffff" stroke-opacity=".05"><path d="M0 100h800M0 200h800M0 300h800M200 0v400M400 0v400M600 0v400"/></g>
+<!-- gum cross-section -->
+<path d="M120 250 Q400 200 680 250 V400 H120Z" fill="url(#gum)"/>
+<path d="M120 290 Q400 250 680 290 V400 H120Z" fill="#f0e6d6" opacity=".9"/>
+<!-- neighbouring teeth -->
+<g fill="url(#tooth)" stroke="#d8d2c4" stroke-width="2">
+  <path d="M190 240 Q180 120 230 112 Q270 120 278 150 Q286 120 300 116 Q326 130 316 240 L300 380 Q280 390 270 330 Q250 390 220 380Z"/>
+  <path d="M610 240 Q620 120 570 112 Q530 120 522 150 Q514 120 500 116 Q474 130 484 240 L500 380 Q520 390 530 330 Q550 390 580 380Z"/>
+</g>
+<!-- implant crown -->
+<path d="M340 200 Q330 96 370 88 Q400 100 400 100 Q400 100 430 88 Q470 96 460 200 Q450 222 400 226 Q350 222 340 200Z" fill="url(#tooth)" stroke="#d8d2c4" stroke-width="3"/>
+<path d="M358 110 Q352 140 360 180" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+<!-- abutment -->
+<path d="M376 224 L424 224 L416 256 L384 256Z" fill="url(#ti)"/>
+<!-- screw -->
+<path d="M380 256 L420 256 L414 370 Q400 392 386 370Z" fill="url(#ti)"/>
+<g stroke="#4f5864" stroke-width="3" opacity=".7">
+  <path d="M380 270 L420 262"/><path d="M381 286 L419 278"/><path d="M382 302 L418 294"/><path d="M383 318 L417 310"/><path d="M384 334 L416 326"/><path d="M386 350 L414 342"/><path d="M388 364 L412 358"/>
+</g>
+<!-- labels -->
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#c9d6e2">
+  <path d="M470 150 H560" stroke="#8a94a3" stroke-width="1.5"/><circle cx="470" cy="150" r="3" fill="#e7b13c"/><text x="568" y="155">Ceramic crown</text>
+  <path d="M424 240 H560" stroke="#8a94a3" stroke-width="1.5"/><circle cx="424" cy="240" r="3" fill="#e7b13c"/><text x="568" y="245">Abutment</text>
+  <path d="M420 320 H560" stroke="#8a94a3" stroke-width="1.5"/><circle cx="420" cy="320" r="3" fill="#e7b13c"/><text x="568" y="325">Titanium implant</text>
+</g>
+</svg>
