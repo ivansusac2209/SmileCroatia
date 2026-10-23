@@ -24,7 +24,7 @@ defineProps<{ pkg: Package }>()
         </li>
       </ul>
       <BaseButton :to="{ name: 'contact-details' }" size="sm" class="mt-5 w-full">
-        Learn More <ArrowRight class="size-4" />
+        Ask About This Treatment <ArrowRight class="size-4" />
       </BaseButton>
     </div>
   </article>
