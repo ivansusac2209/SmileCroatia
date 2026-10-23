@@ -9,15 +9,16 @@ const route = useRoute()
 const open = ref(false)
 
 const links = [
-  { label: 'Home', to: { path: '/' }, exact: true },
+  { label: 'Dental treatments', to: { path: '/', hash: '#dental-treatments' } },
   { label: 'How it works', to: { path: '/', hash: '#how-it-works' } },
+  { label: 'Why SmileCroatia', to: { path: '/', hash: '#why-smilecroatia' } },
 ]
 
 watch(() => route.fullPath, () => (open.value = false))
 watch(open, (isOpen) => document.body.classList.toggle('overflow-hidden', isOpen))
 
 function isActive(link: (typeof links)[number]) {
-  return link.exact ? route.path === '/' && !route.hash : route.hash === link.to.hash
+  return route.path === '/' && route.hash === link.to.hash
 }
 </script>
 
@@ -26,7 +27,7 @@ function isActive(link: (typeof links)[number]) {
     <div class="container-page flex h-16 items-center justify-between gap-6 lg:h-20">
       <AppLogo />
 
-      <nav class="hidden items-center gap-8 md:flex" aria-label="Main">
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="Main">
         <RouterLink
           v-for="link in links"
           :key="link.label"
@@ -39,12 +40,12 @@ function isActive(link: (typeof links)[number]) {
       </nav>
 
       <div class="hidden md:block">
-        <BaseButton :to="{ name: 'contact-details' }" size="sm">Get a Free Plan</BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" size="sm">Get a Free Treatment Plan</BaseButton>
       </div>
 
       <button
         type="button"
-        class="-mr-2 rounded-md p-2 text-navy-800 md:hidden"
+        class="-mr-2 rounded-md p-2 text-navy-800 lg:hidden"
         :aria-expanded="open"
         aria-controls="mobile-menu"
         :aria-label="open ? 'Close menu' : 'Open menu'"
@@ -55,17 +56,18 @@ function isActive(link: (typeof links)[number]) {
       </button>
     </div>
 
-    <div v-if="open" id="mobile-menu" class="fixed inset-x-0 top-16 bottom-0 z-40 bg-white md:hidden">
+    <div v-if="open" id="mobile-menu" class="fixed inset-x-0 top-16 bottom-0 z-40 bg-white lg:hidden">
       <nav class="container-page flex flex-col gap-1 py-6" aria-label="Mobile">
         <RouterLink
           v-for="link in links"
           :key="link.label"
           :to="link.to"
           class="rounded-md px-2 py-3 text-lg text-navy-800 hover:bg-surface"
+          :class="{ 'bg-surface font-medium': isActive(link) }"
         >
           {{ link.label }}
         </RouterLink>
-        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Get a Free Plan</BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Get a Free Treatment Plan</BaseButton>
       </nav>
     </div>
   </header>

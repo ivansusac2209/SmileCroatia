@@ -15,13 +15,13 @@ import { trustBadges } from '@/data/home'
 
     <div class="container-page relative pt-8 pb-12 sm:pt-10 lg:py-24">
       <div class="max-w-xl lg:max-w-[34rem]">
-        <p class="text-xs font-medium tracking-[0.14em] text-muted">HIGH-QUALITY DENTAL CARE IN CROATIA</p>
+        <p class="text-xs font-medium tracking-[0.14em] text-muted">DENTAL TREATMENT &amp; DENTAL TOURISM IN CROATIA</p>
         <h1 class="mt-4 text-4xl leading-[1.1] text-navy-900 sm:text-5xl lg:max-w-[30rem] lg:text-[3.5rem]">
-          A Healthier Smile in a More Beautiful Place
+          Get the Dental Care You Need in Croatia
         </h1>
         <p class="mt-6 text-base leading-relaxed text-muted sm:text-lg">
-          World-class dental treatment, personalized travel support, and a seamless experience from start to finish.
-          Discover expert care and the beauty of Croatia — all in one trip.
+          SmileCroatia helps you explore dental treatment options in Croatia, from crowns and implants to complete smile makeovers.
+          Get a personalized treatment plan, clear package options, and support with planning your visit.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="{ name: 'contact-details' }">
