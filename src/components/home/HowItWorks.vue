@@ -1,29 +1,28 @@
 <script setup lang="ts">
-import { ArrowRight } from 'lucide-vue-next'
+import { ChevronRight } from 'lucide-vue-next'
 import { steps } from '@/data/home'
 </script>
 
 <template>
   <section id="how-it-works" class="scroll-mt-24 overflow-hidden border-y border-line/70 bg-white" aria-labelledby="how-it-works-title">
-    <div class="grid lg:min-h-[340px] lg:grid-cols-[0.8fr_1.2fr]">
-      <div class="relative min-h-56 overflow-hidden lg:min-h-full">
-        <img src="/images/step-travel.jpg" alt="Croatia’s Adriatic coast, where visitors can plan a dental care trip" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white/80 lg:block" />
+    <div class="grid lg:min-h-[285px] lg:grid-cols-[0.76fr_1.24fr]">
+      <div class="relative min-h-52 overflow-hidden lg:min-h-full">
+        <img src="/images/step-travel.jpg" alt="Croatia’s Adriatic coast and historic waterfront" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/70" />
       </div>
-      <div class="container-page py-10 lg:py-12 lg:pl-8">
-        <p class="text-xs font-semibold tracking-[0.15em] text-muted">A CLEARER PATH FORWARD</p>
-        <h2 id="how-it-works-title" class="mt-2 text-3xl text-navy-900 lg:text-4xl">How it works</h2>
-        <p class="mt-2 max-w-xl leading-relaxed text-muted">A simple process to explore dental care in Croatia and plan your next steps.</p>
-        <ol class="mt-8 grid gap-6 sm:grid-cols-3 sm:gap-4">
+      <div class="container-page py-8 lg:py-5 lg:pl-8">
+        <h2 id="how-it-works-title" class="text-3xl text-navy-900 lg:text-4xl">How It Works</h2>
+        <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">A simple process to your new smile in Croatia.</p>
+        <ol class="mt-6 grid gap-5 sm:grid-cols-3 sm:gap-4">
           <li v-for="(step, index) in steps" :key="step.title" class="relative">
             <div class="flex items-center gap-3">
-              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-navy-700 text-sm font-semibold text-navy-800">{{ index + 1 }}</span>
-              <h3 class="text-base font-semibold text-navy-900">{{ ['Get in touch', 'Explore your plan', 'Plan your visit'][index] }}</h3>
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-sky-500 text-sm font-semibold text-sky-600">{{ index + 1 }}</span>
+              <h3 class="text-sm font-semibold text-navy-900">{{ ['Get in Touch', 'Plan Your Treatment', 'Enjoy Your New Smile'][index] }}</h3>
+              <ChevronRight v-if="index < 2" class="ml-auto hidden size-4 text-navy-800 sm:block" />
             </div>
-            <p class="mt-3 text-sm leading-6 text-muted">{{ step.text }}</p>
+            <p class="mt-2 pl-12 text-xs leading-[1.55] text-muted">{{ ['Tell us about your dental needs and receive a free, no-obligation consultation.', 'We connect you with our partner clinics and help you organize your trip and schedule.', 'Receive your treatment in Croatia and make the most of your stay in a beautiful destination.'][index] }}</p>
           </li>
         </ol>
-        <a href="#dental-treatments" class="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-navy-700">Explore treatments <ArrowRight class="size-4" /></a>
       </div>
     </div>
   </section>
