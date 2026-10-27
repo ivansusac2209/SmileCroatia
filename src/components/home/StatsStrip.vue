@@ -3,11 +3,12 @@ import { stats } from '@/data/home'
 </script>
 
 <template>
-  <section id="why-smilecroatia" class="scroll-mt-24 border-y border-line bg-surface py-10" aria-label="Why choose SmileCroatia">
+  <section id="why-smilecroatia" class="scroll-mt-24 border-y border-line bg-[#f7f8f8] py-10 sm:py-12" aria-labelledby="why-title">
     <div class="container-page">
-      <div class="mx-auto mb-8 max-w-2xl text-center">
-        <h2 class="text-2xl text-navy-900 lg:text-3xl">Dental care in Croatia, made easier</h2>
-        <p class="mt-2 leading-relaxed text-muted">Compare treatment options with practical support for planning your trip, from your first enquiry to clinic appointments.</p>
+      <div class="mx-auto mb-8 max-w-3xl text-center">
+        <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">WHY CROATIA</p>
+        <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care and the Adriatic experience, together.</h2>
+        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Croatia is an established health-tourism destination, recognized for dental services alongside its tourism offering. The appeal is the combination of qualified professionals, a strong visitor infrastructure and personal support to help make the journey easier.</p>
       </div>
       <ul class="grid grid-cols-2 gap-y-8 md:grid-cols-4">
         <li
@@ -21,6 +22,7 @@ import { stats } from '@/data/home'
           <p class="mt-1 text-sm text-muted">{{ stat.text }}</p>
         </li>
       </ul>
+      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">Quality depends on the individual clinic and treatment plan. We help you understand the proposed care and coordinate the agreed arrangements for your stay.</p>
     </div>
   </section>
 </template>
