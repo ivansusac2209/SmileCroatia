@@ -19,8 +19,8 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           High-quality dental treatments, modern clinics and a unique opportunity to combine your treatment with a stay in Croatia.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-          <BaseButton :to="{ name: 'contact-details' }">Book a Free Consultation <ArrowRight class="size-4" /></BaseButton>
-          <BaseButton :to="{ path: '/', hash: '#dental-treatments' }" variant="outline">Explore Treatments</BaseButton>
+          <BaseButton :to="{ name: 'contact-details' }">Get My Treatment Plan <ArrowRight class="size-4" /></BaseButton>
+          <BaseButton :to="{ path: '/', hash: '#dental-treatments' }" variant="outline">See Before & After</BaseButton>
         </div>
         <ul class="mt-9 grid max-w-lg grid-cols-3 gap-3 text-xs font-medium leading-5 text-navy-900 sm:gap-5">
           <li class="flex items-center gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Modern<br />clinics</span></li>
