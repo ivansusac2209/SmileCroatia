@@ -13,7 +13,7 @@ import { packages } from '@/data/home'
           <h2 id="packages-title" class="text-3xl text-navy-900 lg:text-4xl">Our Dental Treatments</h2>
           <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">We offer a full range of high-quality prosthetic dental treatments, tailored to your needs.</p>
         </div>
-        <a href="#dental-treatments" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">View all treatments <ArrowRight class="size-4" /></a>
+        <RouterLink :to="{ name: 'contact-details' }" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">Find the right treatment <ArrowRight class="size-4" /></RouterLink>
       </div>
       <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <PackageCard v-for="pkg in packages" :key="pkg.title" :pkg="pkg" />
