@@ -3,7 +3,7 @@ import HeroSection from '@/components/home/HeroSection.vue'
 import FeaturedPackages from '@/components/home/FeaturedPackages.vue'
 import HowItWorks from '@/components/home/HowItWorks.vue'
 import StatsStrip from '@/components/home/StatsStrip.vue'
-import PatientReviews from '@/components/home/PatientReviews.vue'
+import BeforeAfterGallery from '@/components/home/BeforeAfterGallery.vue'
 import PartnerClinics from '@/components/home/PartnerClinics.vue'
 
 const faqs = [
@@ -18,7 +18,7 @@ const faqs = [
   <FeaturedPackages />
   <HowItWorks />
   <StatsStrip />
-  <PatientReviews />
+  <BeforeAfterGallery />
   <PartnerClinics />
   <section id="faq" class="scroll-mt-24 border-t border-line bg-white py-10 lg:py-14" aria-labelledby="faq-title">
     <div class="container-page grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
