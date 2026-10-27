@@ -57,7 +57,18 @@ async function onSubmit() {
         <div class="grid gap-8 md:grid-cols-2">
           <div>
             <FileDropzone v-model="store.files" />
-            <p class="mt-5 text-sm text-navy-900">Examples of files you can upload:</p>
+            <div class="mt-5 rounded-lg border border-line bg-surface p-4">
+            <p class="text-sm font-medium text-navy-900">A few helpful notes</p>
+            <p class="mt-2 text-xs leading-relaxed text-muted">
+              You can start with the information you have. If you do not have scans or an existing treatment plan yet,
+              you can still describe what you need and ask a question.
+            </p>
+            <p class="mt-2 text-xs leading-relaxed text-muted">
+              Dental documents may contain sensitive health information. Please share only files relevant to your inquiry
+              and remove unrelated personal details where possible.
+            </p>
+          </div>
+          <p class="mt-5 text-sm text-navy-900">Examples of files you can upload:</p>
             <ul class="mt-2 space-y-1 text-xs text-muted">
               <li v-for="item in examples" :key="item" class="flex items-center gap-2">
                 <Check class="size-3.5 shrink-0 text-navy-800" /> {{ item }}
@@ -72,9 +83,14 @@ async function onSubmit() {
                 v-model="store.needs"
                 :max="1000"
                 :rows="6"
-                placeholder="E.g. I have a treatment plan for 6 crowns and 2 implants. I'd like to know your price and how many visits are needed."
+                placeholder="E.g. I have a treatment plan for crowns and implants. I'd like to understand the estimated cost and how many visits may be needed."
               />
             </FormField>
+
+            <p class="mt-5 text-xs leading-relaxed text-muted">
+              Your information will be used to respond to your inquiry and assess the next steps. Please do not upload
+              identity documents or information that is not needed for an initial dental review.
+            </p>
 
             <p v-if="error" class="mt-4 text-sm text-danger" role="alert">{{ error }}</p>
 
