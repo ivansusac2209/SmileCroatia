@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import { ShieldCheck, Euro, UserRound, Plane, CircleCheck, Building2, MessagesSquare } from 'lucide-vue-next'
+import { ShieldCheck, ClipboardCheck, UserRound, Plane, CircleCheck, Building2, MessagesSquare } from 'lucide-vue-next'
 
 export interface IconText {
   icon: Component
@@ -8,43 +8,42 @@ export interface IconText {
 }
 
 export const trustBadges: IconText[] = [
-  { icon: ShieldCheck, title: 'Top-rated dental clinics' },
-  { icon: Euro, title: 'Transparent pricing' },
+  { icon: ShieldCheck, title: 'Care from selected clinics' },
+  { icon: ClipboardCheck, title: 'Individual treatment plans' },
   { icon: UserRound, title: 'Personalized support' },
-  { icon: Plane, title: 'A memorable stay in Croatia' },
+  { icon: Plane, title: 'Support planning your visit' },
 ]
 
 export const steps = [
   {
     image: '/images/step-upload.jpg',
     alt: 'Dentist examining a smiling patient',
-    title: '1. Upload Your Plan',
-    text: 'Send us your dental plan or describe your needs. It only takes a few minutes.',
+    title: '1. Tell Us What You Need',
+    text: 'Share your dental concerns, existing treatment plan or the changes you would like to make.',
   },
   {
     image: '/images/step-offer.jpg',
     alt: 'Dental X-ray shown on a clinic monitor',
-    title: '2. Get a Personalized Offer',
-    text: 'Our partner clinic reviews your case and we send you a detailed treatment plan and package options.',
+    title: '2. Review Your Treatment Options',
+    text: 'We help you understand the proposed treatment, appointments and next steps with a partner clinic.',
   },
   {
     image: '/images/step-travel.jpg',
-    alt: 'Two travellers looking over an old town by the sea',
-    title: '3. Travel & Smile',
-    text: 'We organize your stay, transfers and appointments — you just enjoy the experience.',
+    alt: 'Travellers looking over an old town by the sea',
+    title: '3. Plan Your Visit',
+    text: 'Get help coordinating your appointments and practical details for your stay in Croatia.',
   },
 ]
 
 export const stats: IconText[] = [
-  { icon: CircleCheck, title: '40–70%', text: 'lower costs than in the US' },
-  { icon: Building2, title: 'Modern clinics', text: 'with international standards' },
-  { icon: MessagesSquare, title: 'English-speaking', text: 'team and full support' },
-  { icon: Plane, title: 'Combine treatment', text: 'with a holiday in Croatia' },
+  { icon: CircleCheck, title: 'A plan built around you', text: 'Options based on your needs' },
+  { icon: Building2, title: 'Partner clinics', text: 'Clinic details shared transparently' },
+  { icon: MessagesSquare, title: 'English-language support', text: 'Help understanding each step' },
+  { icon: Plane, title: 'Care in Croatia', text: 'Support planning your visit' },
 ]
 
 export interface Package {
   title: string
-  price: string
   image: string
   alt: string
   features: string[]
@@ -53,25 +52,30 @@ export interface Package {
 
 export const packages: Package[] = [
   {
-    title: 'Dental Crowns Package',
-    price: 'From €2,800',
-    image: '/images/package-crowns.jpg',
-    alt: 'Ceramic dental crowns on a model',
-    badge: 'Popular',
-    features: ['High-quality ceramic crowns', 'Clinic appointments', 'Hotel accommodation (optional)', 'Local transfers'],
-  },
-  {
-    title: 'Dental Implants Package',
-    price: 'From €4,500',
+    title: 'Dental Implants',
     image: '/images/package-implants.jpg',
-    alt: 'Dentist demonstrating a dental implant on a model',
-    features: ['Implant placement and crown', '3–5 day stay (depending on plan)', 'Hotel accommodation (optional)', 'Local transfers'],
+    alt: 'Dental implant model illustrating replacement of a missing tooth',
+    badge: 'Replacing missing teeth',
+    features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
-    title: 'Full Smile Makeover',
-    price: 'Custom quote',
+    title: 'Crowns & Bridges',
+    image: '/images/package-crowns.jpg',
+    alt: 'Ceramic crowns used in restorative dentistry',
+    badge: 'Restorative dentistry',
+    features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
+  },
+  {
+    title: 'Dental Veneers',
     image: '/images/package-makeover.jpg',
-    alt: 'Model of a full set of teeth',
-    features: ['Individual treatment plan', 'Premium materials', 'Personalized travel support', 'Flexible stay options'],
+    alt: 'Close-up of a natural-looking smile',
+    badge: 'Cosmetic dentistry',
+    features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
+  },
+  {
+    title: 'Smile Makeover',
+    image: '/images/step-upload.jpg',
+    alt: 'Patient discussing a smile treatment with a dentist',
+    features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
