@@ -52,22 +52,30 @@ export interface Package {
 
 export const packages: Package[] = [
   {
-    title: 'Dental Crowns',
-    image: '/images/package-crowns.jpg',
-    alt: 'Ceramic dental crowns on a model',
-    badge: 'Restorative dentistry',
-    features: ['Restore damaged or weakened teeth', 'Discuss suitable crown materials', 'Understand the appointments involved'],
-  },
-  {
     title: 'Dental Implants',
     image: '/images/package-implants.jpg',
-    alt: 'Dentist demonstrating a dental implant on a model',
-    features: ['Explore options for replacing missing teeth', 'Learn about assessment and treatment stages', 'Discuss your individual treatment plan'],
+    alt: 'Dental implant model illustrating replacement of a missing tooth',
+    badge: 'Replacing missing teeth',
+    features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
+  },
+  {
+    title: 'Crowns & Bridges',
+    image: '/images/package-crowns.jpg',
+    alt: 'Ceramic crowns used in restorative dentistry',
+    badge: 'Restorative dentistry',
+    features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
+  },
+  {
+    title: 'Dental Veneers',
+    image: '/images/package-makeover.jpg',
+    alt: 'Close-up of a natural-looking smile',
+    badge: 'Cosmetic dentistry',
+    features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: '/images/package-makeover.jpg',
-    alt: 'Dental model showing a full set of teeth',
-    features: ['Explore cosmetic and restorative options', 'Consider materials and desired results', 'Build a plan around your dental needs'],
+    image: '/images/step-upload.jpg',
+    alt: 'Patient discussing a smile treatment with a dentist',
+    features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
