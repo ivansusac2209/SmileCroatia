@@ -6,9 +6,9 @@ import { useInquiryStore } from '@/stores/inquiry'
 const store = useInquiryStore()
 
 const nextSteps = [
-  { icon: FileSearch, title: '1. Review', text: 'Our dental team reviews your documents.' },
-  { icon: ClipboardList, title: '2. We prepare your plan', text: "You'll receive a detailed treatment plan and package options." },
-  { icon: Headset, title: "3. We're here for you", text: 'Feel free to contact us if you have any questions.' },
+  { icon: FileSearch, title: '1. Initial review', text: 'We review the information and documents you shared.' },
+  { icon: ClipboardList, title: '2. Discuss your options', text: 'If more information is needed, we will explain what is required before a proposal can be prepared.' },
+  { icon: Headset, title: '3. Plan the next step', text: 'Your coordinator can help with agreed travel arrangements once you decide how to proceed.' },
 ]
 </script>
 
@@ -20,9 +20,9 @@ const nextSteps = [
       </div>
       <h1 class="mt-6 text-3xl text-navy-900 sm:text-4xl">Your Inquiry Has Been Sent!</h1>
       <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Thank you{{ store.firstName ? `, ${store.firstName}` : '' }}! We've received your information and our partner
-        clinic will review your case. You can expect a personalized treatment plan and package options within 2–3
-        business days.
+        Thank you{{ store.firstName ? `, ${store.firstName}` : '' }}! Your inquiry has been submitted. We'll review
+        the information provided and follow up using your preferred contact method about the next steps.
+        Any treatment recommendation, timing and cost will depend on a clinical review.
       </p>
 
       <div class="mt-10 rounded-lg bg-surface p-6 text-left">
