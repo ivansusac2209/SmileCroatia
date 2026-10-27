@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import TreatmentView from '@/views/TreatmentView.vue'
 import { useInquiryStore } from '@/stores/inquiry'
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: HomeView, meta: { title: 'SmileCroatia | Dental Care & Travel' } },
+    { path: '/treatments/:slug', name: 'treatment-detail', component: TreatmentView, meta: { title: 'Dental Treatments | SmileCroatia' } },
     { path: '/contact', redirect: { name: 'contact-details' } },
     {
       path: '/contact/details',
