@@ -18,7 +18,7 @@ defineProps<{ pkg: Package }>()
         'Dental Veneers': 'A minimally invasive way to achieve a natural-looking smile.',
         'Smile Makeover': 'A personalized plan to transform your smile and oral health.',
       } as Record<string, string>)[pkg.title] }}</p>
-      <RouterLink :to="{ name: 'contact-details' }" class="mt-2 inline-flex items-center gap-1 self-start text-xs font-semibold text-sky-700 hover:text-navy-900">Learn more <ArrowRight class="size-3.5" /></RouterLink>
+      <RouterLink :to="{ name: 'treatment-detail', params: { slug: ({ 'Dental Implants': 'dental-implants', 'Crowns & Bridges': 'crowns-bridges', 'Dental Veneers': 'dental-veneers', 'Smile Makeover': 'smile-makeover' } as Record<string, string>)[pkg.title] } }" class="mt-2 inline-flex items-center gap-1 self-start text-xs font-semibold text-sky-700 hover:text-navy-900">Explore treatment <ArrowRight class="size-3.5" /></RouterLink>
     </div>
   </article>
 </template>
