@@ -12,6 +12,7 @@ const links = [
   { label: 'Treatments', to: { path: '/', hash: '#dental-treatments' } },
   { label: 'Our process', to: { path: '/', hash: '#how-it-works' } },
   { label: 'Why Croatia', to: { path: '/', hash: '#why-smilecroatia' } },
+  { label: 'Patient reviews', to: { path: '/', hash: '#patient-reviews' } },
 ]
 
 watch(() => route.fullPath, () => (open.value = false))
@@ -25,14 +26,13 @@ function isActive(link: (typeof links)[number]) {
 <template>
   <div class="hidden border-b border-white/10 bg-navy-900 text-white sm:block">
     <div class="container-page flex h-9 items-center justify-between text-[11px] tracking-wide text-white/80">
-      <span>Thoughtful dental care. A beautiful place to recover.</span>
-      <span class="inline-flex items-center gap-2">Your journey to a confident smile <ArrowUpRight class="size-3.5" /></span>
+      <span>Thoughtful dental care. A beautiful place to visit.</span>
+      <span class="inline-flex items-center gap-2">Dental tourism in Croatia <ArrowUpRight class="size-3.5" /></span>
     </div>
   </div>
   <header class="sticky top-0 z-40 border-b border-line/80 bg-white/95 backdrop-blur-xl">
     <div class="container-page flex h-[4.5rem] items-center justify-between gap-6 lg:h-20">
       <AppLogo />
-
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
         <RouterLink
           v-for="link in links"
@@ -44,11 +44,9 @@ function isActive(link: (typeof links)[number]) {
           {{ link.label }}
         </RouterLink>
       </nav>
-
       <div class="hidden md:block">
-        <BaseButton :to="{ name: 'contact-details' }" size="sm">Get a free treatment plan <ArrowUpRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" size="sm">Discuss your treatment <ArrowUpRight class="size-4" /></BaseButton>
       </div>
-
       <button
         type="button"
         class="-mr-2 rounded-full p-2 text-navy-800 transition-colors hover:bg-surface lg:hidden"
@@ -61,7 +59,6 @@ function isActive(link: (typeof links)[number]) {
         <Menu v-else class="size-6" />
       </button>
     </div>
-
     <div v-if="open" id="mobile-menu" class="fixed inset-x-0 top-[4.5rem] bottom-0 z-40 bg-white lg:hidden">
       <nav class="container-page flex flex-col gap-1 py-6" aria-label="Mobile navigation">
         <RouterLink
@@ -73,7 +70,7 @@ function isActive(link: (typeof links)[number]) {
         >
           {{ link.label }}
         </RouterLink>
-        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Get a free treatment plan <ArrowUpRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Discuss your treatment <ArrowUpRight class="size-4" /></BaseButton>
       </nav>
     </div>
   </header>
