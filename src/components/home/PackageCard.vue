@@ -14,16 +14,11 @@ defineProps<{ pkg: Package }>()
         {{ pkg.badge }}
       </span>
     </div>
-    <div class="flex flex-1 flex-col p-6 lg:p-7">
+    <div class="flex flex-1 flex-col p-5">
       <h3 class="font-serif text-xl text-navy-900">{{ pkg.title }}</h3>
-      <ul class="mt-5 flex-1 space-y-3 text-sm leading-relaxed text-muted">
-        <li v-for="feature in pkg.features" :key="feature" class="flex gap-2.5">
-          <span aria-hidden="true" class="mt-[0.6rem] size-1.5 shrink-0 rounded-full bg-navy-700" />
-          {{ feature }}
-        </li>
-      </ul>
-      <BaseButton :to="{ name: 'contact-details' }" variant="outline" size="sm" class="mt-7 w-full">
-        Ask about this treatment <ArrowRight class="size-4" />
+      <p class="mt-2 min-h-10 text-sm leading-5 text-muted">{{ pkg.features[0] }}</p>
+      <BaseButton :to="{ name: 'contact-details' }" variant="outline" size="sm" class="mt-4 w-full">
+        Learn more <ArrowRight class="size-4" />
       </BaseButton>
     </div>
   </article>
