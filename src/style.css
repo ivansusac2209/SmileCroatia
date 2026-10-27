@@ -3,35 +3,50 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Libre Caslon Text', ui-serif, Georgia, serif;
-
-  --color-navy-900: #0f1f33;
-  --color-navy-800: #14273d;
-  --color-navy-700: #1d3550;
-  --color-ink: #1b2a3a;
-  --color-muted: #5b6676;
-  --color-subtle: #8a94a3;
-  --color-line: #e2e5ea;
-  --color-surface: #f7f7f5;
-  --color-success: #3f9b6b;
-  --color-success-soft: #e3f2e9;
-  --color-star: #e7b13c;
-  --color-danger: #c0392b;
+  --color-navy-900: #10283a;
+  --color-navy-800: #18394d;
+  --color-navy-700: #285268;
+  --color-ink: #203544;
+  --color-muted: #687783;
+  --color-subtle: #8a989f;
+  --color-line: #e4e8e5;
+  --color-surface: #f7f7f2;
+  --color-success: #3f8769;
+  --color-success-soft: #e3f0e9;
+  --color-star: #c89c52;
+  --color-danger: #b83c35;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
   body {
     @apply bg-white font-sans text-ink antialiased;
+    font-feature-settings: 'ss01' on;
   }
-  h1,
-  h2,
-  h3 {
-    @apply font-serif;
+  h1, h2, h3 { @apply font-serif; letter-spacing: -0.035em; }
+  h1 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  img { color: transparent; }
+  ::selection { background: #dbe9e5; color: #10283a; }
+  :focus-visible { outline: 3px solid #6d9d91; outline-offset: 3px; }
+}
+
+.container-page { @apply mx-auto w-full max-w-[1280px] px-5 sm:px-7 lg:px-10; }
+
+@layer components {
+  .premium-panel {
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    background: white;
+    box-shadow: 0 12px 40px rgb(16 40 58 / 5%);
   }
 }
 
-.container-page {
-  @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
