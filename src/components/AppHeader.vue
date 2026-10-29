@@ -11,7 +11,7 @@ const links = [
   { label: 'Dental Treatments', to: { path: '/', hash: '#dental-treatments' } },
   { label: 'How It Works', to: { path: '/', hash: '#how-it-works' } },
   { label: 'Why Croatia', to: { path: '/', hash: '#why-smilecroatia' } },
-  { label: 'About', to: { path: '/', hash: '#partner-clinics' } },
+  { label: 'Before You Travel', to: { path: '/', hash: '#partner-clinics' } },
   { label: 'FAQ', to: { path: '/', hash: '#faq' } },
 ]
 watch(() => route.fullPath, () => (open.value = false))
@@ -29,11 +29,11 @@ function isActive(link: (typeof links)[number]) {
         <RouterLink v-for="link in links" :key="link.label" :to="link.to" class="border-b py-2 text-[11px] font-medium transition-colors" :class="isActive(link) ? 'border-navy-800 text-navy-800' : 'border-transparent text-navy-800 hover:text-sky-700'">{{ link.label }}<ChevronDown v-if="link.label === 'Dental Treatments'" class="ml-1 inline size-3" /></RouterLink>
       </nav>
       <div class="hidden items-center gap-5 md:flex">
-        <button type="button" class="inline-flex items-center gap-1.5 text-xs font-medium text-navy-900" aria-label="Current language: English"><Globe2 class="size-4" /> EN <ChevronDown class="size-3" /></button>
-        <BaseButton :to="{ name: 'contact-details' }" size="sm">Book a Consultation <ArrowUpRight class="size-4" /></BaseButton>
+        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-navy-900" aria-label="Site language: English"><Globe2 class="size-4" /> EN</span>
+        <BaseButton :to="{ name: 'contact-details' }" size="sm">Get My Personalized Proposal <ArrowUpRight class="size-4" /></BaseButton>
       </div>
       <div class="flex items-center gap-2 xl:hidden">
-        <BaseButton :to="{ name: 'contact-details' }" size="sm" class="px-3 text-xs sm:px-4">Get My Plan <ArrowUpRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" size="sm" class="px-3 text-xs sm:px-4">Get My Proposal <ArrowUpRight class="size-4" /></BaseButton>
         <button type="button" class="-mr-2 rounded-full p-2 text-navy-800 transition-colors hover:bg-surface" :aria-expanded="open" aria-controls="mobile-menu" :aria-label="open ? 'Close menu' : 'Open menu'" @click="open = !open">
         <X v-if="open" class="size-6" />
         <Menu v-else class="size-6" />
