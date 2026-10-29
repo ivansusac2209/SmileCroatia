@@ -92,6 +92,10 @@ async function sendInquiry(request, env) {
   const preferredContact = String(form.get('preferred_contact') || '').trim().slice(0, 40)
   const message = String(form.get('message') || '').trim().slice(0, 5000)
   const dentalNeeds = String(form.get('dental_needs') || '').trim().slice(0, 5000)
+  const preferredArrival = String(form.get('preferred_arrival') || '').trim().slice(0, 20)
+  const preferredDeparture = String(form.get('preferred_departure') || '').trim().slice(0, 20)
+  const travelers = String(form.get('travelers') || '').trim().slice(0, 20)
+  const travelPreferences = String(form.get('travel_preferences') || '').trim().slice(0, 2000)
 
   if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return json({ error: 'Please provide your name and a valid email address.' }, 400)
@@ -131,6 +135,10 @@ async function sendInquiry(request, env) {
     `Phone: ${phone || 'Not provided'}`,
     `Country: ${country || 'Not provided'}`,
     `Preferred contact: ${preferredContact || 'Not provided'}`,
+    `Preferred arrival: ${preferredArrival || 'Not provided'}`,
+    `Preferred departure: ${preferredDeparture || 'Not provided'}`,
+    `Travelers: ${travelers || 'Not provided'}`,
+    `Travel preferences: ${travelPreferences || 'Not provided'}`,
     '',
     'Message:',
     message || 'Not provided',
@@ -149,6 +157,10 @@ async function sendInquiry(request, env) {
       <tr><th align="left">Phone</th><td>${escapeHtml(phone || 'Not provided')}</td></tr>
       <tr><th align="left">Country</th><td>${escapeHtml(country || 'Not provided')}</td></tr>
       <tr><th align="left">Preferred contact</th><td>${escapeHtml(preferredContact || 'Not provided')}</td></tr>
+      <tr><th align="left">Preferred arrival</th><td>${escapeHtml(preferredArrival || 'Not provided')}</td></tr>
+      <tr><th align="left">Preferred departure</th><td>${escapeHtml(preferredDeparture || 'Not provided')}</td></tr>
+      <tr><th align="left">Travelers</th><td>${escapeHtml(travelers || 'Not provided')}</td></tr>
+      <tr><th align="left">Travel preferences</th><td>${escapeHtml(travelPreferences || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
       <tr><th align="left">Message</th><td>${escapeHtml(message || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
       <tr><th align="left">Dental needs</th><td>${escapeHtml(dentalNeeds || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
       <tr><th align="left">Attachments</th><td>${attachments.length}</td></tr>
