@@ -13,7 +13,7 @@ import { packages } from '@/data/home'
           <h2 id="packages-title" class="text-3xl text-navy-900 lg:text-4xl">Our Dental Treatments</h2>
           <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">Treatment and travel costs are tailored to your needs. Send us your treatment plan and travel requests to receive a personalized proposal within 1–3 business days.</p>
         </div>
-        <RouterLink :to="{ name: 'contact-details' }" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">Find the right treatment <ArrowRight class="size-4" /></RouterLink>
+        <RouterLink :to="{ name: 'contact-details' }" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">Get My Personalized Proposal <ArrowRight class="size-4" /></RouterLink>
       </div>
       <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <PackageCard v-for="pkg in packages" :key="pkg.title" :pkg="pkg" />
@@ -23,7 +23,7 @@ import { packages } from '@/data/home'
           <h3 class="text-lg text-navy-900">Not sure where to start?</h3>
           <p class="mt-1 text-sm leading-relaxed text-muted">Tell us what you would like to improve and get help understanding your next steps.</p>
         </div>
-        <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Discuss your options <ArrowRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
       </div>
     </div>
   </section>
