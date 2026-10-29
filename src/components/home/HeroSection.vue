@@ -13,7 +13,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
       <div class="max-w-2xl">
         <p class="text-[11px] font-semibold tracking-[0.16em] text-navy-900">DENTAL CARE & TRAVEL IN CROATIA</p>
         <h1 class="mt-4 max-w-2xl text-4xl leading-[1.02] text-navy-900 sm:text-5xl lg:text-[3.65rem] xl:text-[4rem]">
-          Your journey to a new smile,<br class="hidden sm:block" /> taken care of.
+          Your smile. Our priority.
         </h1>
         <p class="mt-5 max-w-xl text-base leading-7 text-navy-800 sm:text-lg">
           Explore dental treatment options in Croatia with a dedicated personal coordinator who handles clinic communication, appointment planning and travel arrangements — so you can focus on your journey while we take care of the details.
