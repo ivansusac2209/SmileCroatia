@@ -38,7 +38,7 @@ const galleryImage = '/images/Galerija%20transformacija%20osmijeha%20prije%20i%2
           <h3 class="text-lg font-semibold text-navy-900">Your smile. Your goals. A plan made for you.</h3>
           <p class="mt-1 max-w-2xl text-sm leading-6 text-muted">Share your dental records and goals. We will help coordinate an individual review and explain the next steps before you plan your trip.</p>
         </div>
-        <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Treatment Plan <ArrowRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
       </div>
     </div>
   </section>
