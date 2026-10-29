@@ -89,6 +89,32 @@ async function onSubmit() {
               />
             </FormField>
 
+            <div class="mt-7 border-t border-line pt-6">
+              <h2 class="text-lg font-semibold text-navy-900">Your travel preferences</h2>
+              <p class="mt-1 text-sm leading-6 text-muted">These details help us prepare a more useful estimate. All fields below are optional.</p>
+              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <FormField id="arrival" label="Preferred arrival date" optional>
+                  <input id="arrival" v-model="store.details.preferredArrival" type="date" :class="inputClasses()" />
+                </FormField>
+                <FormField id="departure" label="Preferred departure date" optional>
+                  <input id="departure" v-model="store.details.preferredDeparture" type="date" :min="store.details.preferredArrival || undefined" :class="inputClasses()" />
+                </FormField>
+                <FormField id="travelers" label="Number of travelers" optional>
+                  <select id="travelers" v-model="store.details.travelers" :class="inputClasses()">
+                    <option value="1">1 traveler</option>
+                    <option value="2">2 travelers</option>
+                    <option value="3">3 travelers</option>
+                    <option value="4+">4 or more</option>
+                  </select>
+                </FormField>
+                <div class="sm:col-span-2">
+                  <FormField id="travelPreferences" label="Accommodation, transfers or other requests" optional>
+                    <TextareaCounter id="travelPreferences" v-model="store.details.travelPreferences" :max="1000" :rows="3" placeholder="E.g. hotel preferences, airport pickup, mobility needs or flexible dates." />
+                  </FormField>
+                </div>
+              </div>
+            </div>
+
             <p class="mt-5 text-xs leading-relaxed text-muted">
               Your information will be used to respond to your inquiry and assess the next steps. Please do not upload
               identity documents or information that is not needed for an initial dental review.
