@@ -36,10 +36,10 @@ export const steps = [
 ]
 
 export const stats: IconText[] = [
-  { icon: CircleCheck, title: 'A plan built around you', text: 'Options based on your needs' },
-  { icon: Building2, title: 'Partner clinics', text: 'Clinic details shared transparently' },
-  { icon: MessagesSquare, title: 'English-language support', text: 'Help understanding each step' },
-  { icon: Plane, title: 'Care in Croatia', text: 'Support planning your visit' },
+  { icon: UserRound, title: '75+ happy clients', text: 'People who have trusted us with their dental journey' },
+  { icon: MessagesSquare, title: 'Personal support', text: 'One point of contact throughout the planning process' },
+  { icon: Building2, title: 'Accommodation included', text: 'Your stay is arranged as part of your dental trip' },
+  { icon: Plane, title: 'Local transfers included', text: 'Help getting between your accommodation and appointments' },
 ]
 
 export interface Package {
