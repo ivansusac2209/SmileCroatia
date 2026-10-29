@@ -53,22 +53,22 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/4971503/pexels-photo-4971503.jpeg?cs=srgb&dl=pexels-gustavo-fring-4971503.jpg&fm=jpg',
-    alt: 'Dentist consulting a patient during a dental examination',
+    image: 'https://images.pexels.com/photos/6812429/pexels-photo-6812429.jpeg?auto=compress&dpr=1&h=750&w=1260',
+    alt: 'Dentist discussing treatment options with a patient in a modern clinic',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://images.pexels.com/photos/6627564/pexels-photo-6627564.jpeg?cs=srgb&dl=pexels-karola-g-6627564.jpg&fm=jpg',
-    alt: 'Dentist carefully checking a veneer on a patient',
+    image: 'https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&dpr=1&h=750&w=1260',
+    alt: 'Dentist talking with a patient in a bright modern dental clinic',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?cs=srgb&dl=pexels-shvetsa-3845626.jpg&fm=jpg',
-    alt: 'Dentist helping a patient compare tooth shades during a consultation',
+    image: 'https://images.pexels.com/photos/3845654/pexels-photo-3845654.jpeg?auto=compress&dpr=1&h=750&w=1260',
+    alt: 'Dentist helping a patient review her smile during a check-up',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
