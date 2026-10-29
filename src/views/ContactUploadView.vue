@@ -90,7 +90,7 @@ async function onSubmit() {
             <div class="mt-7 border-t border-line pt-6">
               <h2 class="text-lg font-semibold text-navy-900">Your travel preferences</h2>
               <p class="mt-1 text-sm leading-6 text-muted">These dates are flexible preferences, not fixed commitments. If your dates are not decided yet, you can leave them blank.</p>
-              <div class="mt-4 grid grid-cols-2 items-start gap-3 [&>div>label]:flex [&>div>label]:min-h-10 [&>div>label]:items-end">
+              <div class="mt-4 grid grid-cols-1 items-start gap-3 sm:grid-cols-2 [&>div>label]:flex [&>div>label]:min-h-10 [&>div>label]:items-end">
                 <FormField id="arrival" label="Preferred arrival" optional>
                   <input id="arrival" v-model="store.details.preferredArrival" type="date" :class="inputClasses()" />
                 </FormField>
