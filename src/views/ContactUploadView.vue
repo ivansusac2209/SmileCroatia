@@ -85,7 +85,7 @@ async function onSubmit() {
                 id="needs"
                 v-model="store.needs"
                 :max="1000"
-                :rows="6"
+                 :rows="4"
                 placeholder="E.g. I have a treatment plan for crowns and implants. I'd like to understand the estimated cost and how many visits may be needed."
               />
             </FormField>
@@ -93,7 +93,7 @@ async function onSubmit() {
             <div class="mt-7 border-t border-line pt-6">
               <h2 class="text-lg font-semibold text-navy-900">Your travel preferences</h2>
               <p class="mt-1 text-sm leading-6 text-muted">These details help us prepare a more useful estimate. All fields below are optional.</p>
-              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div class="mt-4 grid items-start gap-4 sm:grid-cols-2 [&>div>label]:flex [&>div>label]:min-h-10 [&>div>label]:items-end">
                 <FormField id="arrival" label="Preferred arrival date" optional>
                   <input id="arrival" v-model="store.details.preferredArrival" type="date" :class="inputClasses()" />
                 </FormField>
@@ -110,7 +110,7 @@ async function onSubmit() {
                 </FormField>
                 <div class="sm:col-span-2">
                   <FormField id="travelPreferences" label="Accommodation, transfers or other requests" optional>
-                    <TextareaCounter id="travelPreferences" v-model="store.details.travelPreferences" :max="1000" :rows="3" placeholder="E.g. hotel preferences, airport pickup, mobility needs or flexible dates." />
+                    <TextareaCounter id="travelPreferences" v-model="store.details.travelPreferences" :max="1000" :rows="2" placeholder="E.g. hotel preferences, airport pickup, mobility needs or flexible dates." />
                   </FormField>
                 </div>
               </div>
@@ -123,13 +123,14 @@ async function onSubmit() {
 
             <p v-if="error" class="mt-4 text-sm text-danger" role="alert">{{ error }}</p>
 
-            <div class="mt-8 flex justify-end md:mt-auto md:pt-8">
-              <BaseButton type="submit" :disabled="sending" class="w-full sm:w-auto">
-                <template v-if="sending"><LoaderCircle class="size-4 animate-spin" /> Sending…</template>
-                <template v-else>Continue <ArrowRight class="size-4" /></template>
-              </BaseButton>
-            </div>
+
           </div>
+        </div>
+        <div class="sticky bottom-0 z-20 mt-5 flex justify-end border-t border-line bg-white/95 py-3 backdrop-blur sm:mt-6">
+          <BaseButton type="submit" :disabled="sending" class="w-full sm:w-auto">
+            <template v-if="sending"><LoaderCircle class="size-4 animate-spin" /> Sending…</template>
+            <template v-else>Continue <ArrowRight class="size-4" /></template>
+          </BaseButton>
         </div>
       </form>
     </div>
