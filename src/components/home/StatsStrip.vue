@@ -7,8 +7,8 @@ import { stats } from '@/data/home'
     <div class="container-page">
       <div class="mx-auto mb-8 max-w-3xl text-center">
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">WHY CROATIA</p>
-        <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care and the Adriatic experience, together.</h2>
-        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Croatia is an established health-tourism destination, recognized for dental services alongside its tourism offering. The appeal is the combination of qualified professionals, a strong visitor infrastructure and personal support to help make the journey easier.</p>
+        <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care with the ease of a Croatian getaway.</h2>
+        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Make your dental visit part of a well-organized stay in Croatia. Alongside coordinating your clinic and appointments, SmileCroatia arranges your accommodation and local transfers, giving you more time to focus on your care and enjoy your time here.</p>
       </div>
       <ul class="grid grid-cols-2 gap-y-8 md:grid-cols-4">
         <li
@@ -22,7 +22,7 @@ import { stats } from '@/data/home'
           <p class="mt-1 text-sm text-muted">{{ stat.text }}</p>
         </li>
       </ul>
-      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">Quality depends on the individual clinic and treatment plan. We help you understand the proposed care and coordinate the agreed arrangements for your stay.</p>
+      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">Your flights are booked separately. Your personalized proposal explains your dental care, accommodation, local transfers and any other arrangements included in your trip.</p>
     </div>
   </section>
 </template>
