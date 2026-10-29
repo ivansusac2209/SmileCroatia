@@ -22,10 +22,10 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           <BaseButton :to="{ name: 'contact-details' }">Get My Personal Plan <ArrowRight class="size-4" /></BaseButton>
           <BaseButton :to="{ path: '/', hash: '#dental-treatments' }" variant="outline">Explore Treatments</BaseButton>
         </div>
-        <ul class="mt-9 grid max-w-lg grid-cols-3 gap-3 text-xs font-medium leading-5 text-navy-900 sm:gap-5">
-          <li class="flex items-center gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Personalized<br />treatment guidance</span></li>
-          <li class="flex items-center gap-2"><Users class="size-7 shrink-0" stroke-width="1.5" /><span>Clinic & appointment<br />coordination</span></li>
-          <li class="flex items-center gap-2"><Plane class="size-7 shrink-0" stroke-width="1.5" /><span>Travel<br />assistance</span></li>
+        <ul class="mt-9 grid max-w-lg grid-cols-1 gap-3 text-sm font-medium leading-5 text-navy-900 sm:grid-cols-3 sm:gap-5 sm:text-xs">
+          <li class="flex items-center gap-3 sm:gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Personalized<br />treatment guidance</span></li>
+          <li class="flex items-center gap-3 sm:gap-2"><Users class="size-7 shrink-0" stroke-width="1.5" /><span>Clinic & appointment<br />coordination</span></li>
+          <li class="flex items-center gap-3 sm:gap-2"><Plane class="size-7 shrink-0" stroke-width="1.5" /><span>Travel<br />assistance</span></li>
         </ul>
       </div>
     </div>
