@@ -32,10 +32,13 @@ function isActive(link: (typeof links)[number]) {
         <button type="button" class="inline-flex items-center gap-1.5 text-xs font-medium text-navy-900" aria-label="Current language: English"><Globe2 class="size-4" /> EN <ChevronDown class="size-3" /></button>
         <BaseButton :to="{ name: 'contact-details' }" size="sm">Book a Consultation <ArrowUpRight class="size-4" /></BaseButton>
       </div>
-      <button type="button" class="-mr-2 rounded-full p-2 text-navy-800 transition-colors hover:bg-surface xl:hidden" :aria-expanded="open" aria-controls="mobile-menu" :aria-label="open ? 'Close menu' : 'Open menu'" @click="open = !open">
+      <div class="flex items-center gap-2 xl:hidden">
+        <BaseButton :to="{ name: 'contact-details' }" size="sm" class="px-3 text-xs sm:px-4">Get My Plan <ArrowUpRight class="size-4" /></BaseButton>
+        <button type="button" class="-mr-2 rounded-full p-2 text-navy-800 transition-colors hover:bg-surface" :aria-expanded="open" aria-controls="mobile-menu" :aria-label="open ? 'Close menu' : 'Open menu'" @click="open = !open">
         <X v-if="open" class="size-6" />
         <Menu v-else class="size-6" />
-      </button>
+        </button>
+      </div>
     </div>
     <div v-if="open" id="mobile-menu" class="fixed inset-x-0 top-[4.25rem] bottom-0 z-40 bg-white xl:hidden">
       <nav class="container-page flex flex-col gap-1 py-6" aria-label="Mobile navigation">
