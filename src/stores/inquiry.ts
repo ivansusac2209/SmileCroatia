@@ -12,6 +12,10 @@ export interface InquiryDetails {
   country: CountryCode
   contactMethod: ContactMethod
   message: string
+  preferredArrival: string
+  preferredDeparture: string
+  travelers: string
+  travelPreferences: string
 }
 
 const STORAGE_KEY = 'smilecroatia-inquiry'
@@ -25,6 +29,10 @@ function emptyDetails(): InquiryDetails {
     country: DEFAULT_COUNTRY,
     contactMethod: 'email',
     message: '',
+    preferredArrival: '',
+    preferredDeparture: '',
+    travelers: '1',
+    travelPreferences: '',
   }
 }
 
