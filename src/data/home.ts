@@ -53,8 +53,8 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/6812429/pexels-photo-6812429.jpeg?auto=compress&dpr=1&h=750&w=1260',
-    alt: 'Dentist treating a patient in a modern dental clinic',
+    image: 'https://images.pexels.com/photos/6812429/pexels-photo-6812429.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist consulting a patient in a bright modern dental clinic',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
@@ -75,7 +75,7 @@ export const packages: Package[] = [
   {
     title: 'Smile Makeover',
     image: 'https://images.pexels.com/photos/3845654/pexels-photo-3845654.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Patient smiling and checking her teeth in a mirror after a dental visit',
+    alt: 'Patient checking her smile with a dentist in a modern dental clinic',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
