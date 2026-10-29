@@ -59,7 +59,28 @@ router.beforeEach((to) => {
 })
 
 router.afterEach((to) => {
-  document.title = (to.meta.title as string) ?? 'SmileCroatia'
+  const treatmentSeo: Record<string, { title: string; description: string }> = {
+    'dental-implants': {
+      title: 'Dental Implants in Croatia | SmileCroatia',
+      description: 'Explore dental implant options in Croatia with SmileCroatia. Learn about treatment stages, healing time and the questions to discuss with a dental professional.',
+    },
+    'crowns-bridges': {
+      title: 'Dental Crowns & Bridges in Croatia | SmileCroatia',
+      description: 'Learn about dental crowns and bridges in Croatia. SmileCroatia helps you coordinate clinic communication and understand the proposed treatment and costs.',
+    },
+    'dental-veneers': {
+      title: 'Dental Veneers in Croatia | SmileCroatia',
+      description: 'Explore dental veneer options in Croatia and learn what to discuss with a dentist, including suitability, alternatives and treatment planning.',
+    },
+    'smile-makeover': {
+      title: 'Smile Makeover in Croatia | SmileCroatia',
+      description: 'Explore personalized smile makeover options in Croatia. Treatment recommendations depend on an individual assessment by a dental professional.',
+    },
+  }
+  const slug = String(to.params.slug ?? '')
+  const specificSeo = to.name === 'treatment-detail' ? treatmentSeo[slug] : undefined
+  const title = specificSeo?.title ?? (to.meta.title as string) ?? 'SmileCroatia'
+  document.title = title
 
   const setMeta = (selector: string, attribute: string, value: string) => {
     let element = document.head.querySelector<HTMLMetaElement>(selector)
@@ -75,10 +96,12 @@ router.afterEach((to) => {
     element.setAttribute(attribute, value)
   }
 
-  const description = (to.meta.description as string) ?? 'Personalized dental care proposals in Croatia with SmileCroatia.'
+  const description = specificSeo?.description ?? (to.meta.description as string) ?? 'Personalized dental care proposals in Croatia with SmileCroatia.'
   setMeta('meta[name="description"]', 'content', description)
   setMeta('meta[name="robots"]', 'content', (to.meta.robots as string) ?? 'index, follow')
   setMeta('meta[property="og:title"]', 'content', document.title)
+  setMeta('meta[name="twitter:title"]', 'content', document.title)
+  setMeta('meta[name="twitter:description"]', 'content', description)
   setMeta('meta[property="og:description"]', 'content', description)
   setMeta('meta[property="og:url"]', 'content', 'https://smilecroatia.com' + to.path)
 
