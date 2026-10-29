@@ -43,7 +43,7 @@ function isActive(link: (typeof links)[number]) {
     <div v-if="open" id="mobile-menu" class="fixed inset-x-0 top-[4.25rem] bottom-0 z-40 bg-white xl:hidden">
       <nav class="container-page flex flex-col gap-1 py-6" aria-label="Mobile navigation">
         <RouterLink v-for="link in links" :key="link.label" :to="link.to" class="rounded-xl px-3 py-4 text-lg text-navy-800 transition-colors hover:bg-surface" :class="{ 'bg-surface font-medium': isActive(link) }">{{ link.label }}</RouterLink>
-        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Book a Consultation <ArrowUpRight class="size-4" /></BaseButton>
+        <BaseButton :to="{ name: 'contact-details' }" class="mt-4 w-full">Get My Personalized Proposal <ArrowUpRight class="size-4" /></BaseButton>
       </nav>
     </div>
   </header>
