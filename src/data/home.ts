@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/6812429/pexels-photo-6812429.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist consulting a patient at a modern dental clinic',
+    image: 'https://images.pexels.com/photos/13207320/pexels-photo-13207320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dental implant kit and instruments prepared for implant treatment',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://images.pexels.com/photos/6812558/pexels-photo-6812558.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist examining a patient with an assistant in a modern clinic',
+    image: 'https://images.pexels.com/photos/4971541/pexels-photo-4971541.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Close-up of a dentist performing restorative dental treatment',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://images.pexels.com/photos/6812523/pexels-photo-6812523.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist and assistant performing a dental procedure',
+    image: 'https://images.pexels.com/photos/6627564/pexels-photo-6627564.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist carefully applying a veneer to a patient’s tooth',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: 'https://images.pexels.com/photos/6812569/pexels-photo-6812569.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist and assistant caring for a patient in a modern dental clinic',
+    image: 'https://images.pexels.com/photos/6627572/pexels-photo-6627572.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Close-up of a dental veneer procedure in progress',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
