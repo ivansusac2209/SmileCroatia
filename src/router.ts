@@ -80,7 +80,7 @@ router.afterEach((to) => {
   setMeta('meta[name="robots"]', 'content', (to.meta.robots as string) ?? 'index, follow')
   setMeta('meta[property="og:title"]', 'content', document.title)
   setMeta('meta[property="og:description"]', 'content', description)
-  setMeta('meta[property="og:url"]', 'content', window.location.origin + to.path)
+  setMeta('meta[property="og:url"]', 'content', 'https://smilecroatia.com' + to.path)
 
   let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
   if (!canonical) {
@@ -88,5 +88,5 @@ router.afterEach((to) => {
     canonical.rel = 'canonical'
     document.head.appendChild(canonical)
   }
-  canonical.href = window.location.origin + to.path
+  canonical.href = 'https://smilecroatia.com' + to.path
 })
