@@ -19,7 +19,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           From finding the right clinic and coordinating your appointments to organizing your stay and local travel, your personal coordinator takes care of the details. You just book your flights to Croatia — we’ll help take care of the rest.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-          <BaseButton :to="{ name: 'contact-details' }">Get My Personal Plan <ArrowRight class="size-4" /></BaseButton>
+          <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
           <BaseButton :to="{ path: '/', hash: '#dental-treatments' }" variant="outline">Explore Treatments</BaseButton>
         </div>
         <ul class="mt-9 grid max-w-lg grid-cols-1 gap-3 text-sm font-medium leading-5 text-navy-900 sm:grid-cols-3 sm:gap-5 sm:text-xs">
