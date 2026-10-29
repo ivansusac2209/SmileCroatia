@@ -6,7 +6,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 <template>
   <section class="relative isolate overflow-hidden bg-[#f5f8fa]">
     <div class="absolute inset-0 -z-10 lg:left-[34%]">
-      <img src="/images/Nasmejana%20putnica%20iznad%20Jadrana.png" alt="A traveler enjoying Croatia's Adriatic coast" class="h-full w-full object-cover object-center" fetchpriority="high" />
+      <img src="/images/Osmijesi%20uz%20Jadran%20u%20ordinaciji.png" alt="A patient smiling with her dentist in a modern dental clinic overlooking Croatia’s Adriatic coast" class="h-full w-full object-cover object-center" fetchpriority="high" />
       <div class="absolute inset-0 bg-gradient-to-r from-[#f5f8fa] via-[#f5f8fa]/90 to-[#f5f8fa]/10 lg:via-[#f5f8fa]/55 lg:to-transparent" />
     </div>
     <div class="container-page relative flex min-h-[540px] items-center py-12 sm:py-16 lg:min-h-[500px] lg:py-20">
