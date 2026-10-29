@@ -4,8 +4,8 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 
 const included = [
   { icon: ClipboardCheck, title: 'Dental examination', text: 'Assessment and treatment recommendations are provided by the clinic; any fee is listed in your proposal.' },
-  { icon: BedDouble, title: 'Accommodation', text: 'Accommodation is coordinated only when explicitly listed in your written proposal.' },
-  { icon: CarFront, title: 'Local transfers', text: 'Local transfers are arranged only for the routes listed in your written proposal.' },
+  { icon: BedDouble, title: 'Accommodation', text: 'Your stay in Croatia is arranged as part of your dental trip.' },
+  { icon: CarFront, title: 'Local transfers', text: 'Local transfers are included to help you get between your accommodation and planned appointments.' },
   { icon: Headset, title: 'A dedicated coordinator', text: 'Your coordinator helps organize appointments and the travel services agreed with you.' },
 ]
 </script>
@@ -15,8 +15,8 @@ const included = [
     <div class="container-page">
       <div class="mx-auto max-w-2xl text-center">
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">MORE THAN A DENTAL APPOINTMENT</p>
-        <h2 id="package-includes-title" class="mt-3 text-3xl text-navy-900 sm:text-4xl">A dental trip, thoughtfully coordinated.</h2>
-        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">You book your flights. We coordinate clinic communication, appointments and any travel services agreed in your written proposal.</p>
+        <h2 id="package-includes-title" class="mt-3 text-3xl text-navy-900 sm:text-4xl">Dental care, accommodation and local travel — coordinated together.</h2>
+        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">You book your flights; we coordinate your accommodation, local transfers, clinic communication and appointments for a smoother stay in Croatia.</p>
       </div>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <article v-for="item in included" :key="item.title" class="border border-line bg-white p-5 sm:p-6">
@@ -32,7 +32,7 @@ const included = [
         </div>
         <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
       </div>
-      <p class="mt-4 flex items-start justify-center gap-2 text-center text-xs leading-5 text-muted"><Plane class="mt-0.5 size-4 shrink-0" />Flights are booked separately by you. Services are included only when itemized in your written proposal. Clinical recommendations, timing and final treatment costs are confirmed by your dental provider.</p>
+      <p class="mt-4 flex items-start justify-center gap-2 text-center text-xs leading-5 text-muted"><Plane class="mt-0.5 size-4 shrink-0" />Flights are booked separately by you. Your package includes accommodation and local transfers, alongside the services detailed in your proposal. Clinical recommendations, treatment timing and final treatment costs are confirmed by your dental provider.</p>
     </div>
   </section>
 </template>
