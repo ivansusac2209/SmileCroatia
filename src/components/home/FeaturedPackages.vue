@@ -11,7 +11,7 @@ import { packages } from '@/data/home'
       <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
         <div>
           <h2 id="packages-title" class="text-3xl text-navy-900 lg:text-4xl">Our Dental Treatments</h2>
-          <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">We offer a full range of high-quality prosthetic dental treatments, tailored to your needs.</p>
+          <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">Treatment and travel costs are tailored to your needs. Send us your treatment plan and travel requests to receive a personalized proposal within 1–3 business days.</p>
         </div>
         <RouterLink :to="{ name: 'contact-details' }" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">Find the right treatment <ArrowRight class="size-4" /></RouterLink>
       </div>
