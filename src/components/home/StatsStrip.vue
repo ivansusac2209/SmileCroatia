@@ -8,9 +8,9 @@ import { stats } from '@/data/home'
       <div class="mx-auto mb-8 max-w-3xl text-center">
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">WHY CROATIA</p>
         <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care with the ease of a Croatian getaway.</h2>
-        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Make your dental visit part of a well-organized stay in Croatia. Alongside coordinating your clinic and appointments, SmileCroatia arranges your accommodation and local transfers, giving you more time to focus on your care and enjoy your time here.</p>
+        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Depending on the treatment, dental care in Croatia can cost around 30–70% less than comparable treatment in the US or UK. SmileCroatia also coordinates your clinic appointments, accommodation and local transfers, so you can focus on your care and enjoy your stay.</p>
       </div>
-      <ul class="grid grid-cols-2 gap-y-8 md:grid-cols-4">
+      <ul class="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-5">
         <li
           v-for="(stat, i) in stats"
           :key="stat.title"
@@ -22,7 +22,7 @@ import { stats } from '@/data/home'
           <p class="mt-1 text-sm text-muted">{{ stat.text }}</p>
         </li>
       </ul>
-      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">Your flights are booked separately. Your personalized proposal explains your dental care, accommodation, local transfers and any other arrangements included in your trip.</p>
+      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">The 30–70% figure is an indicative comparison of dental treatment costs, not a guaranteed saving on the full trip. Actual prices and savings vary by treatment, clinical needs and provider. Flights are booked separately; your personalized proposal outlines your treatment, accommodation and local transfers.</p>
     </div>
   </section>
 </template>
