@@ -10,7 +10,7 @@ import { stats } from '@/data/home'
         <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care with the ease of a Croatian getaway.</h2>
         <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Depending on the treatment, dental care in Croatia can cost around 30–70% less than comparable treatment in the US or UK. SmileCroatia also coordinates your clinic appointments, accommodation and local transfers, so you can focus on your care and enjoy your stay.</p>
       </div>
-      <ul class="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-5">
+      <ul class="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4">
         <li
           v-for="(stat, i) in stats"
           :key="stat.title"
