@@ -55,7 +55,7 @@ function formatSize(bytes: number) {
   <div>
     <button
       type="button"
-      class="flex w-full flex-col items-center justify-center rounded-lg border-2 border-dashed px-6 py-12 text-center transition-colors focus-visible:outline-2 focus-visible:outline-navy-700"
+      class="flex w-full flex-col items-center justify-center rounded-lg border-2 border-dashed px-4 py-8 text-center sm:px-6 sm:py-12 transition-colors focus-visible:outline-2 focus-visible:outline-navy-700"
       :class="dragging ? 'border-navy-700 bg-navy-800/5' : 'border-line bg-surface hover:border-subtle'"
       @click="input?.click()"
       @dragover.prevent="dragging = true"
@@ -63,7 +63,7 @@ function formatSize(bytes: number) {
       @drop.prevent="onDrop"
     >
       <Upload class="size-7 text-navy-800" stroke-width="1.5" />
-      <span class="mt-4 text-sm font-medium text-navy-900">Upload your dental plan or files</span>
+      <span class="mt-3 text-sm font-medium text-navy-900 sm:mt-4">Upload your dental plan or files</span>
       <span class="mt-2 text-xs text-muted">Drag and drop files here, or click to browse</span>
       <span class="mt-1 text-xs text-muted">PDF, JPG, PNG, WEBP, DICOM · max 5 files, 8 MB total</span>
     </button>
