@@ -73,7 +73,7 @@ const treatment = computed(() => treatments[String(route.params.slug)] ?? null)
         <h1 class="mt-3 text-4xl leading-tight text-navy-900 sm:text-5xl">{{ treatment.title }}</h1>
         <p class="mt-5 text-base leading-7 text-muted">{{ treatment.intro }}</p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-          <BaseButton :to="{ name: 'contact-details' }">Request an Individual Plan <ArrowRight class="size-4" /></BaseButton>
+          <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
         </div>
         <p class="mt-3 text-xs leading-5 text-muted">No fixed treatment price is quoted before your needs and clinical information have been reviewed.</p>
       </div>
@@ -115,7 +115,7 @@ const treatment = computed(() => treatments[String(route.params.slug)] ?? null)
         <h2 class="text-2xl text-navy-900">Understand your options before you travel.</h2>
         <p class="mt-2 max-w-2xl text-sm leading-6 text-muted">Send us your questions and any relevant documents. We can help coordinate the next steps with a partner clinic and explain the agreed travel arrangements.</p>
       </div>
-      <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Treatment Plan <ArrowRight class="size-4" /></BaseButton>
+      <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
     </div>
   </section>
   <section v-else class="container-page py-16 text-center">
