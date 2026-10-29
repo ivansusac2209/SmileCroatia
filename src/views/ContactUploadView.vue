@@ -47,9 +47,9 @@ async function onSubmit() {
 
     <div class="mx-auto mt-10 max-w-4xl">
       <header class="text-center">
-        <h1 class="text-3xl text-navy-900 sm:text-4xl">Upload Your Dental Plan</h1>
+        <h1 class="text-3xl text-navy-900 sm:text-4xl">Share Your Dental Information</h1>
         <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
-          Share your treatment plan, any dental records you have and your travel preferences. Our team will coordinate the next steps and aim to get back to you within 1–3 business days with a personalized proposal, including pricing and what is covered. Any treatment recommendation must be confirmed by a dental professional.
+          If you have a treatment plan or dental records, you can share them here — but they are optional. Tell us what you are looking for and add any travel preferences. We will review your inquiry and aim to reply within 1–3 business days with a personalized proposal outlining estimated pricing and package inclusions. Any treatment recommendation must be confirmed by a dental professional.
         </p>
       </header>
 
@@ -68,7 +68,7 @@ async function onSubmit() {
               and remove unrelated personal details where possible.
             </p>
           </div>
-          <p class="mt-5 text-sm text-navy-900">Examples of files you can upload:</p>
+          <p class="mt-5 text-sm text-navy-900">Helpful examples (all optional):</p>
             <ul class="mt-2 space-y-1 text-xs text-muted">
               <li v-for="item in examples" :key="item" class="flex items-center gap-2">
                 <Check class="size-3.5 shrink-0 text-navy-800" /> {{ item }}
@@ -83,7 +83,7 @@ async function onSubmit() {
                 v-model="store.needs"
                 :max="1000"
                  :rows="4"
-                placeholder="E.g. I have a treatment plan for crowns and implants. I'd like to understand the estimated cost and how many visits may be needed."
+                placeholder="E.g. I am interested in crowns or implants and would like to understand the estimated cost and likely number of visits."
               />
             </FormField>
 
