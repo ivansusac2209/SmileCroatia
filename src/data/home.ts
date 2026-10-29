@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/6812531/pexels-photo-6812531.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist performing a dental procedure using clinical instruments',
+    image: 'https://images.pexels.com/photos/6502340/pexels-photo-6502340.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Close-up of a dental implant restoration on a dental model',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://images.pexels.com/photos/4971541/pexels-photo-4971541.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Close-up of a dentist performing restorative dental treatment',
+    image: 'https://www.kuraraynoritake.eu/media/Header_Clinical_Case.jpg',
+    alt: 'Clinical close-up of teeth prepared for ceramic crowns',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://images.pexels.com/photos/6627564/pexels-photo-6627564.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://cdn.prod.website-files.com/691c7c9f71031c1a48dc3bd6/691c7c9f71031c1a48dc3f8f_Get%20Veneers%20in%20Coral%20Gables.jpg',
     alt: 'Dentist carefully applying a veneer to a patient’s tooth',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: 'https://images.pexels.com/photos/6627572/pexels-photo-6627572.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Close-up of a dental veneer procedure in progress',
+    image: 'https://www.humbledentist.com/thedentalsitecontent/1002014/gallery/medium_after2_202271716336_373.jpg',
+    alt: 'Natural-looking dental implant crown restoration after treatment',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
