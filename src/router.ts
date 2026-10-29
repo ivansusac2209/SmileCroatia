@@ -6,26 +6,42 @@ import { useInquiryStore } from '@/stores/inquiry'
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'home', component: HomeView, meta: { title: 'SmileCroatia | Dental Care & Travel' } },
-    { path: '/treatments/:slug', name: 'treatment-detail', component: TreatmentView, meta: { title: 'Dental Treatments | SmileCroatia' } },
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+      meta: {
+        title: 'Dental Tourism in Croatia | SmileCroatia',
+        description: 'Explore dental tourism in Croatia with a personalized treatment proposal, transparent package details and support with clinic appointments, accommodation and local transfers.',
+      },
+    },
+    {
+      path: '/treatments/:slug',
+      name: 'treatment-detail',
+      component: TreatmentView,
+      meta: {
+        title: 'Dental Treatments in Croatia | SmileCroatia',
+        description: 'Explore dental treatment options in Croatia with SmileCroatia. Request a personalized proposal and learn about the next steps before making travel plans.',
+      },
+    },
     { path: '/contact', redirect: { name: 'contact-details' } },
     {
       path: '/contact/details',
       name: 'contact-details',
       component: () => import('@/views/ContactDetailsView.vue'),
-      meta: { title: 'Your Details | SmileCroatia' },
+      meta: { title: 'Your Details | SmileCroatia', robots: 'noindex, nofollow' },
     },
     {
       path: '/contact/upload',
       name: 'contact-upload',
       component: () => import('@/views/ContactUploadView.vue'),
-      meta: { title: 'Upload Your Dental Plan | SmileCroatia', requiresDetails: true },
+      meta: { title: 'Send Your Dental Inquiry | SmileCroatia', robots: 'noindex, nofollow', requiresDetails: true },
     },
     {
       path: '/contact/sent',
       name: 'contact-sent',
       component: () => import('@/views/ContactSentView.vue'),
-      meta: { title: 'Inquiry Sent | SmileCroatia', requiresSubmitted: true },
+      meta: { title: 'Inquiry Received | SmileCroatia', robots: 'noindex, nofollow', requiresSubmitted: true },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
@@ -44,4 +60,33 @@ router.beforeEach((to) => {
 
 router.afterEach((to) => {
   document.title = (to.meta.title as string) ?? 'SmileCroatia'
+
+  const setMeta = (selector: string, attribute: string, value: string) => {
+    let element = document.head.querySelector<HTMLMetaElement>(selector)
+    if (!element) {
+      element = document.createElement('meta')
+      if (selector.startsWith('meta[name=')) {
+        element.name = selector.match(/meta\[name="([^"]+)"\]/)?.[1] ?? ''
+      } else {
+        element.setAttribute('property', selector.match(/meta\[property="([^"]+)"\]/)?.[1] ?? '')
+      }
+      document.head.appendChild(element)
+    }
+    element.setAttribute(attribute, value)
+  }
+
+  const description = (to.meta.description as string) ?? 'Personalized dental care proposals in Croatia with SmileCroatia.'
+  setMeta('meta[name="description"]', 'content', description)
+  setMeta('meta[name="robots"]', 'content', (to.meta.robots as string) ?? 'index, follow')
+  setMeta('meta[property="og:title"]', 'content', document.title)
+  setMeta('meta[property="og:description"]', 'content', description)
+  setMeta('meta[property="og:url"]', 'content', window.location.origin + to.path)
+
+  let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement('link')
+    canonical.rel = 'canonical'
+    document.head.appendChild(canonical)
+  }
+  canonical.href = window.location.origin + to.path
 })
