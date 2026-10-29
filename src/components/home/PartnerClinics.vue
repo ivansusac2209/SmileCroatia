@@ -19,7 +19,7 @@
             <img src="https://images.pexels.com/photos/6502030/pexels-photo-6502030.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Patient and dentist discussing dental care in a bright clinic" class="aspect-[4/3] w-full object-cover" loading="lazy" />
             <figcaption class="p-3 text-sm text-navy-900">Discuss your dental needs</figcaption>
           </figure>
-          <figure class="mt-7 overflow-hidden bg-white">
+          <figure class="overflow-hidden bg-white">
             <img src="https://images.pexels.com/photos/5355704/pexels-photo-5355704.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dentist showing a patient dental X-ray results during a consultation" class="aspect-[4/3] w-full object-cover" loading="lazy" />
             <figcaption class="p-3 text-sm text-navy-900">Understand your treatment plan</figcaption>
           </figure>
