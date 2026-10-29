@@ -103,6 +103,9 @@ router.afterEach((to) => {
   setMeta('meta[name="twitter:title"]', 'content', document.title)
   setMeta('meta[name="twitter:description"]', 'content', description)
   setMeta('meta[property="og:description"]', 'content', description)
+  setMeta('meta[property="og:image"]', 'content', 'https://smilecroatia.com/images/hero.jpg')
+  setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image')
+  setMeta('meta[name="twitter:image"]', 'content', 'https://smilecroatia.com/images/hero.jpg')
   setMeta('meta[property="og:url"]', 'content', 'https://smilecroatia.com' + to.path)
 
   let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
