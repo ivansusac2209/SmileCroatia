@@ -50,9 +50,8 @@ async function onSubmit() {
     <div class="mx-auto mt-10 max-w-4xl">
       <header class="text-center">
         <h1 class="text-3xl text-navy-900 sm:text-4xl">Upload Your Dental Plan</h1>
-        <p class="mx-auto mt-3 max-w-xl text-sm text-muted">
-          Share your existing dental plan or any available documents, and tell us a bit about your needs. Our partner
-          clinic will review everything and send you a personalized offer.
+        <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
+          Share your treatment plan, any dental records you have and your travel preferences. Our team will coordinate the next steps and aim to get back to you within 1–3 business days with a personalized proposal, including pricing and what is covered. Any treatment recommendation must be confirmed by a dental professional.
         </p>
       </header>
 
