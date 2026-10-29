@@ -53,8 +53,8 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/13207320/pexels-photo-13207320.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dental implant kit and instruments prepared for implant treatment',
+    image: 'https://images.pexels.com/photos/6812531/pexels-photo-6812531.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist performing a dental procedure using clinical instruments',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
