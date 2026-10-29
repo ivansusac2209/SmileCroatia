@@ -16,7 +16,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           Your smile. Our priority.
         </h1>
         <p class="mt-5 max-w-xl text-base leading-7 text-navy-800 sm:text-lg">
-          Explore dental treatment options in Croatia with a dedicated personal coordinator who handles clinic communication, appointment planning and travel arrangements — so you can focus on your journey while we take care of the details.
+          From finding the right clinic and coordinating your appointments to organizing your stay and local travel, your personal coordinator takes care of the details. You just book your flights to Croatia — we’ll help take care of the rest.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="{ name: 'contact-details' }">Get My Personal Plan <ArrowRight class="size-4" /></BaseButton>
