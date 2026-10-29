@@ -33,9 +33,9 @@ async function onSubmit() {
     router.push({ name: 'contact-sent' })
   } catch (e) {
     console.error(e)
-    error.value = e instanceof Error && e.message.includes('521')
-      ? 'Our form service is temporarily unavailable. Your inquiry was not sent. Please try again later or contact us by email.'
-      : 'Sorry, we could not send your inquiry. Please check your connection and try again.'
+    error.value = e instanceof Error
+      ? e.message
+      : 'Sorry, we could not send your inquiry. Please try again later.'
   } finally {
     sending.value = false
   }

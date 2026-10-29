@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Upload, FileText, X } from 'lucide-vue-next'
-import { fileError } from '@/lib/validation'
+import { fileError, MAX_FILES, MAX_TOTAL_FILE_BYTES } from '@/lib/validation'
 
 const files = defineModel<File[]>({ required: true })
 const dragging = ref(false)
@@ -12,9 +12,22 @@ function addFiles(list: FileList | null) {
   if (!list) return
   errors.value = []
   for (const file of Array.from(list)) {
+    if (files.value.some((f) => f.name === file.name && f.size === file.size)) continue
     const err = fileError(file)
-    if (err) errors.value.push(err)
-    else if (!files.value.some((f) => f.name === file.name && f.size === file.size)) files.value = [...files.value, file]
+    if (err) {
+      errors.value.push(err)
+      continue
+    }
+    if (files.value.length >= MAX_FILES) {
+      errors.value.push('You can upload up to 5 files.')
+      continue
+    }
+    const totalSize = [...files.value, file].reduce((sum, item) => sum + item.size, 0)
+    if (totalSize > MAX_TOTAL_FILE_BYTES) {
+      errors.value.push('The combined size of your files must be 8 MB or smaller.')
+      continue
+    }
+    files.value = [...files.value, file]
   }
 }
 
@@ -52,13 +65,13 @@ function formatSize(bytes: number) {
       <Upload class="size-7 text-navy-800" stroke-width="1.5" />
       <span class="mt-4 text-sm font-medium text-navy-900">Upload your dental plan or files</span>
       <span class="mt-2 text-xs text-muted">Drag and drop files here, or click to browse</span>
-      <span class="mt-1 text-xs text-muted">PDF, JPG, PNG, DICOM (max 20 MB)</span>
+      <span class="mt-1 text-xs text-muted">PDF, JPG, PNG, WEBP, DICOM · max 5 files, 8 MB total</span>
     </button>
     <input
       ref="input"
       type="file"
       multiple
-      accept=".pdf,.jpg,.jpeg,.png,.dcm,.dicom,application/pdf,image/jpeg,image/png,application/dicom"
+      accept=".pdf,.jpg,.jpeg,.png,.webp,.dcm,.dicom,application/pdf,image/jpeg,image/png,image/webp,application/dicom"
       class="sr-only"
       tabindex="-1"
       aria-label="Upload your dental plan or files"

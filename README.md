@@ -1,59 +1,37 @@
-# SmileCroatia (MVP)
+# SmileCroatia
 
-Client-only Vue 3 site: homepage + contact page (3-step inquiry flow). No backend.
+Vue 3 + Vite dental tourism website. The contact flow submits inquiries through a Cloudflare Worker and Resend.
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173
-npm run build     # type-check + production build into dist/
-npm run preview   # serve the built dist/
+npm run dev
+npm run build
+npm run preview
 ```
 
-Requires Node 20+.
+## Inquiry email setup (Cloudflare Worker + Resend)
 
-## Where things are
+The browser sends the contact form to the same-origin `/api/inquiry` Worker endpoint. The Worker validates the input and optional files, then sends the inquiry using the Resend API. The Resend API key is only used server-side and must never be exposed through a `VITE_*` variable or committed to Git.
 
-| Path | What |
-| --- | --- |
-| `src/views/HomeView.vue` | Homepage (hero, how it works, stats strip, featured packages) |
-| `src/views/Contact*View.vue` | Contact flow: `/contact/details` → `/contact/upload` → `/contact/sent` |
-| `src/data/home.ts` | All homepage text, stats and package prices |
-| `src/lib/submitInquiry.ts` | Sends the inquiry to the form service |
-| `src/style.css` | Design tokens (colours, fonts) |
-| `public/images/` | Unsplash photos (credits in `IMAGES.md`); earlier drawn versions in `public/images/illustrations/` |
+### One-time production setup
 
-## Connecting the inquiry email
+1. Create a Resend account at https://resend.com/.
+2. Add and verify a domain you control in Resend. Use a sender address on that verified domain.
+3. In Cloudflare Dashboard, open **Workers & Pages → smilecroatia → Settings → Variables and Secrets** (or the equivalent bindings section). Add:
+   - **Secret** `RESEND_API_KEY`: the API key from Resend.
+   - **Variable** `RESEND_FROM_EMAIL`: a sender on the verified domain, e.g. `SmileCroatia <inquiries@your-verified-domain.com>`.
+   - **Variable** `RESEND_TO_EMAIL`: the inbox that receives inquiries, e.g. `ivan.susac35@gmail.com`.
+4. Save and redeploy the Worker.
+5. Submit a text-only test inquiry, then a small PNG. Confirm the message and attachment arrive in the recipient inbox and check Resend's email logs.
 
-Inquiries are sent with [FormSubmit](https://formsubmit.co) (no account needed) to **ivan.susac35@gmail.com**.
-The endpoint is set in `.env` (not committed):
+A successful browser response means Resend accepted the email request; it does not guarantee final inbox delivery. Resend requires a properly configured sender domain for production sending. Check current plan limits at https://resend.com/pricing.
 
-```bash
-cp .env.example .env
-# edit .env:
-VITE_FORM_ENDPOINT=https://formsubmit.co/ajax/ivan.susac35@gmail.com
-```
+## Upload limits
 
-The **first submission** triggers a one-time activation email to that inbox; click the link in it, otherwise no
-inquiries are delivered. Without `VITE_FORM_ENDPOINT` the form runs in **demo mode**: it shows the confirmation page
-but sends nothing (the payload is logged to the browser console).
+The form accepts PDF, JPG/JPEG, PNG, WEBP and DICOM files. The Worker enforces a maximum of 5 files, 5 MB per file and 8 MB combined. Uploaded files are attached to the email and are not stored by this application.
 
-Rebuild after changing it (on Netlify/Cloudflare Pages, set it as an environment variable instead).
-The form posts `multipart/form-data` with fields `name`, `email`, `phone`, `country`, `preferred_contact`,
-`message`, `dental_needs`, `_subject`, the FormSubmit options `_captcha` and `_template`, and files under
-`attachments`.
+## Privacy
 
-## Deploying
-
-Any static host. Build command `npm run build`, output folder `dist`. `public/_redirects` handles SPA routes on
-Netlify and Cloudflare Pages.
-
-## Left out of the MVP (unclear in the design)
-
-Treatments / Packages / Croatia / About pages, the About dropdown, "View All Packages", footer, the
-"When are you planning to travel?" and "How did you hear about us?" fields. "Learn More" links go to the contact page.
-
-## Before launch
-
-Dental plans and X-rays are health data under GDPR. Add a privacy policy and consent checkbox before collecting real inquiries.
+Dental plans and scans may contain sensitive health data. Confirm that the privacy notice, retention practices and chosen email provider are appropriate before collecting real patient records. Email attachments are not a secure medical-record portal.
