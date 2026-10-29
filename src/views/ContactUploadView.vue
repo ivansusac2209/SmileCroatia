@@ -7,6 +7,7 @@ import FileDropzone from '@/components/contact/FileDropzone.vue'
 import FormField from '@/components/ui/FormField.vue'
 import TextareaCounter from '@/components/ui/TextareaCounter.vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
+import { inputClasses } from '@/components/ui/inputClasses'
 import { useInquiryStore } from '@/stores/inquiry'
 import { submitInquiry } from '@/lib/submitInquiry'
 
