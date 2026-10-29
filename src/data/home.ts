@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: '/images/package-implants.jpg',
-    alt: 'Dental implant model illustrating replacement of a missing tooth',
+    image: 'https://images.pexels.com/photos/4971503/pexels-photo-4971503.jpeg?cs=srgb&dl=pexels-gustavo-fring-4971503.jpg&fm=jpg',
+    alt: 'Dentist consulting a patient during a dental examination',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: '/images/package-crowns.jpg',
-    alt: 'Ceramic crowns used in restorative dentistry',
+    image: 'https://images.pexels.com/photos/6627564/pexels-photo-6627564.jpeg?cs=srgb&dl=pexels-karola-g-6627564.jpg&fm=jpg',
+    alt: 'Dentist carefully checking a veneer on a patient',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: '/images/package-makeover.jpg',
-    alt: 'Close-up of a natural-looking smile',
+    image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?cs=srgb&dl=pexels-shvetsa-3845626.jpg&fm=jpg',
+    alt: 'Dentist helping a patient compare tooth shades during a consultation',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: '/images/step-upload.jpg',
-    alt: 'Patient discussing a smile treatment with a dentist',
+    image: 'https://images.pexels.com/photos/6627574/pexels-photo-6627574.jpeg?cs=srgb&dl=pexels-karola-g-6627574.jpg&fm=jpg',
+    alt: 'Patient smiling and checking her teeth in a mirror after a dental visit',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
