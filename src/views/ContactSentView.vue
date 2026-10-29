@@ -6,9 +6,9 @@ import { useInquiryStore } from '@/stores/inquiry'
 const store = useInquiryStore()
 
 const nextSteps = [
-  { icon: FileSearch, title: '1. Initial review', text: 'We review the information and documents you shared.' },
-  { icon: ClipboardList, title: '2. Discuss your options', text: 'If more information is needed, we will explain what is required before a proposal can be prepared.' },
-  { icon: Headset, title: '3. Plan the next step', text: 'Your coordinator can help with agreed travel arrangements once you decide how to proceed.' },
+  { icon: FileSearch, title: '1. We review your request', text: 'We review your goals, available dental records and travel preferences.' },
+  { icon: ClipboardList, title: '2. Your proposal in 1–3 business days', text: 'We aim to reply with an individual proposal outlining estimated costs, what is included and the next steps. A dental professional confirms clinical recommendations.' },
+  { icon: Headset, title: '3. You decide what happens next', text: 'There is no need to book flights yet. If you accept the proposal, your coordinator will help arrange the agreed appointments and travel details.' },
 ]
 </script>
 
@@ -20,9 +20,8 @@ const nextSteps = [
       </div>
       <h1 class="mt-6 text-3xl text-navy-900 sm:text-4xl">Your Inquiry Has Been Sent!</h1>
       <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Thank you{{ store.firstName ? `, ${store.firstName}` : '' }}! Your inquiry has been submitted. We'll review
-        the information provided and follow up using your preferred contact method about the next steps.
-        Any treatment recommendation, timing and cost will depend on a clinical review.
+        Thank you{{ store.firstName ? `, ${store.firstName}` : '' }}! We’ve received your inquiry. We aim to contact you within 1–3 business days with a personalized proposal based on the information you shared.
+        Final treatment recommendations and costs depend on review by a dental professional.
       </p>
 
       <div class="mt-10 rounded-lg bg-surface p-6 text-left">
@@ -38,7 +37,11 @@ const nextSteps = [
         </ul>
       </div>
 
-      <BaseButton to="/" class="mt-10">Back to Homepage</BaseButton>
+      <p class="mx-auto mt-5 max-w-xl text-xs leading-5 text-muted">
+        Keep an eye on your inbox, including your spam or junk folder. You do not need to book flights until you have reviewed the proposal and agreed on the next steps.
+      </p>
+
+      <BaseButton to="/" class="mt-8">Back to Homepage</BaseButton>
     </div>
   </section>
 </template>
