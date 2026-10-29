@@ -34,9 +34,7 @@ async function onSubmit() {
     router.push({ name: 'contact-sent' })
   } catch (e) {
     console.error(e)
-    error.value = e instanceof Error
-      ? e.message
-      : 'Sorry, we could not send your inquiry. Please try again later.'
+    error.value = 'We could not send your inquiry right now. Your details should still be available on this page. Please try again in a moment. If the problem continues, contact us directly.'
   } finally {
     sending.value = false
   }
@@ -120,15 +118,16 @@ async function onSubmit() {
               identity documents or information that is not needed for an initial dental review.
             </p>
 
-            <p v-if="error" class="mt-4 text-sm text-danger" role="alert">{{ error }}</p>
+            <p v-if="error" class="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm leading-6 text-danger" role="alert">{{ error }}</p>
 
 
           </div>
         </div>
-        <div class="sticky bottom-0 z-20 mt-5 flex justify-end border-t border-line bg-white/95 py-3 backdrop-blur sm:mt-6">
-          <BaseButton type="submit" :disabled="sending" class="w-full sm:w-auto">
-            <template v-if="sending"><LoaderCircle class="size-4 animate-spin" /> Sending…</template>
-            <template v-else>Continue <ArrowRight class="size-4" /></template>
+        <div class="sticky bottom-0 z-20 mt-5 flex flex-col gap-2 border-t border-line bg-white/95 py-3 backdrop-blur sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="max-w-xl text-xs leading-5 text-muted">After you send your inquiry, we aim to reply within 1–3 business days. Sending an inquiry does not commit you to treatment or travel bookings.</p>
+          <BaseButton type="submit" :disabled="sending" class="w-full shrink-0 sm:w-auto">
+            <template v-if="sending"><LoaderCircle class="size-4 animate-spin" /> Sending inquiry…</template>
+            <template v-else>Send My Inquiry <ArrowRight class="size-4" /></template>
           </BaseButton>
         </div>
       </form>
