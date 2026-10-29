@@ -12,15 +12,15 @@ import { steps } from '@/data/home'
       </div>
       <div class="container-page py-8 lg:py-5 lg:pl-8">
         <h2 id="how-it-works-title" class="text-3xl text-navy-900 lg:text-4xl">How It Works</h2>
-        <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">Personal guidance from your first enquiry through your stay in Croatia.</p>
+        <p class="mt-1 text-sm leading-relaxed text-muted sm:text-base">You book your flights. Your personal coordinator handles the planning, clinic communication and agreed travel arrangements.</p>
         <ol class="mt-6 grid gap-5 sm:grid-cols-3 sm:gap-4">
           <li v-for="(step, index) in steps" :key="step.title" class="relative">
             <div class="flex items-center gap-3">
               <span class="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-sky-500 text-sm font-semibold text-sky-600">{{ index + 1 }}</span>
-              <h3 class="text-sm font-semibold text-navy-900">{{ ['Share Your Needs', 'Review Your Plan', 'Travel With Support'][index] }}</h3>
+              <h3 class="text-sm font-semibold text-navy-900">{{ ['Tell Us What You Need', 'We Organize Your Plan', 'Arrive — We’ll Be Ready'][index] }}</h3>
               <ChevronRight v-if="index < 2" class="ml-auto hidden size-4 text-navy-800 sm:block" />
             </div>
-            <p class="mt-2 pl-12 text-xs leading-[1.55] text-muted">{{ ['Send us your goals and any dental records you have so we can coordinate an initial review.', 'Review the proposed care, inclusions and deposit and balance terms before making travel plans.', 'Your coordinator helps organize the agreed accommodation, transfers and appointment schedule during your stay.'][index] }}</p>
+            <p class="mt-2 pl-12 text-xs leading-[1.55] text-muted">{{ ['Tell us what you would like to improve and share any dental records you already have. We’ll coordinate the next steps with suitable dental professionals.', 'We coordinate clinic communication, appointment planning and the details included in your proposed package. You’ll know the plan and costs before you commit.', 'Once you book your flights, we help coordinate your agreed accommodation, local transfers and appointments, and support you throughout your stay.'][index] }}</p>
           </li>
         </ol>
       </div>
