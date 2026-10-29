@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/6502340/pexels-photo-6502340.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Close-up of a dental implant restoration on a dental model',
+    image: 'https://images.pexels.com/photos/8727478/pexels-photo-8727478.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Natural close-up of a smiling woman showing her teeth',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://www.kuraraynoritake.eu/media/Header_Clinical_Case.jpg',
-    alt: 'Clinical close-up of teeth prepared for ceramic crowns',
+    image: 'https://images.pexels.com/photos/18505360/pexels-photo-18505360.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Warm close-up portrait of a woman with a natural smile',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://cdn.prod.website-files.com/691c7c9f71031c1a48dc3bd6/691c7c9f71031c1a48dc3f8f_Get%20Veneers%20in%20Coral%20Gables.jpg',
-    alt: 'Dentist carefully applying a veneer to a patient’s tooth',
+    image: 'https://images.pexels.com/photos/16002544/pexels-photo-16002544.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Close-up portrait of a smiling woman',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: 'https://www.humbledentist.com/thedentalsitecontent/1002014/gallery/medium_after2_202271716336_373.jpg',
-    alt: 'Natural-looking dental implant crown restoration after treatment',
+    image: 'https://images.pexels.com/photos/33801241/pexels-photo-33801241.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Woman smiling naturally outdoors in bright light',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
