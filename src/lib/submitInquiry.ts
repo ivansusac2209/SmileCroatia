@@ -24,6 +24,7 @@ export async function submitInquiry({ details, needs, files }: InquiryPayload): 
   const form = new FormData()
   form.append('name', details.fullName)
   form.append('email', details.email)
+  form.append('_replyto', details.email)
   form.append('phone', `${dial} ${details.phone}`.trim())
   form.append('country', countryName(details.country))
   form.append('preferred_contact', details.contactMethod)
@@ -33,8 +34,8 @@ export async function submitInquiry({ details, needs, files }: InquiryPayload): 
   // FormSubmit options: disable its captcha and use a table-formatted email.
   form.append('_captcha', 'false')
   form.append('_template', 'table')
-  // FormSubmit expects attachments under the _attachment field.
-  files.forEach((file) => form.append('_attachment', file, file.name))
+  // FormSubmit's documented upload field is `attachment` (without an underscore).
+  files.forEach((file) => form.append('attachment', file, file.name))
 
   if (isDemoMode) {
     console.warn('[SmileCroatia] VITE_FORM_ENDPOINT is not set. Inquiry was not sent (demo mode).')
