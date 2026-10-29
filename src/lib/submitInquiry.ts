@@ -24,6 +24,10 @@ export async function submitInquiry({ details, needs, files }: InquiryPayload): 
   form.append('country', countryName(details.country))
   form.append('preferred_contact', details.contactMethod)
   form.append('message', details.message)
+  form.append('preferred_arrival', details.preferredArrival)
+  form.append('preferred_departure', details.preferredDeparture)
+  form.append('travelers', details.travelers)
+  form.append('travel_preferences', details.travelPreferences)
   form.append('dental_needs', needs)
   files.forEach((file) => form.append('attachment', file, file.name))
 
