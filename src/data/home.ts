@@ -38,7 +38,6 @@ export const steps = [
 export const stats: IconText[] = [
   { icon: UserRound, title: '75+ happy clients', text: 'People who have trusted us with their dental journey' },
   { icon: Percent, title: 'Save 30–70%', text: 'Potential savings on comparable dental treatments vs. the US and UK' },
-  { icon: MessagesSquare, title: 'Personal support', text: 'One point of contact throughout the planning process' },
   { icon: Building2, title: 'Accommodation included', text: 'Your stay is arranged as part of your dental trip' },
   { icon: Plane, title: 'Local transfers included', text: 'Help getting between your accommodation and appointments' },
 ]
