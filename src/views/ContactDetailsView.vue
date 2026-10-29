@@ -56,7 +56,8 @@ function onSubmit() {
     <div class="mx-auto mt-10 max-w-4xl">
       <header class="text-center">
         <h1 class="text-3xl text-navy-900 sm:text-4xl">Your Details</h1>
-        <p class="mt-3 text-sm text-muted">Let us know a bit about yourself so we can prepare your personalized plan.</p>
+        <p class="mt-3 text-sm leading-6 text-muted">Share your contact details so we can respond to your inquiry and prepare your personalized plan.</p>
+        <p class="mx-auto mt-2 max-w-xl text-xs leading-5 text-muted">Your name, email and phone number are required. On the next step, you can share dental records and travel preferences if you have them.</p>
       </header>
 
       <form class="mt-10" novalidate @submit.prevent="onSubmit">
@@ -125,7 +126,8 @@ function onSubmit() {
           </div>
         </div>
 
-        <div class="mt-8 flex justify-end">
+        <p class="mt-6 text-xs leading-5 text-muted">Not sure about your treatment details yet? That is okay — you can still send an inquiry with the information you have.</p>
+        <div class="mt-5 flex justify-end">
           <BaseButton type="submit" class="w-full sm:w-auto">Continue <ArrowRight class="size-4" /></BaseButton>
         </div>
       </form>
