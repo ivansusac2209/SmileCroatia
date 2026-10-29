@@ -16,7 +16,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           Your smile. Our priority.
         </h1>
         <p class="mt-5 max-w-xl text-base leading-7 text-navy-800 sm:text-lg">
-          From finding the right clinic and coordinating your appointments to organizing your stay and local travel, your personal coordinator takes care of the details. You just book your flights to Croatia — we’ll help take care of the rest.
+          Combine your dental care with a well-organized stay in Croatia. We coordinate your clinic appointments, accommodation and local transfers, so you can focus on your treatment and enjoy more peace of mind while you’re here. You book your flights; we help take care of the rest.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
@@ -25,7 +25,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
         <ul class="mt-9 grid max-w-lg grid-cols-1 gap-3 text-sm font-medium leading-5 text-navy-900 sm:grid-cols-3 sm:gap-5 sm:text-xs">
           <li class="flex items-center gap-3 sm:gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Personalized<br />treatment guidance</span></li>
           <li class="flex items-center gap-3 sm:gap-2"><Users class="size-7 shrink-0" stroke-width="1.5" /><span>Clinic & appointment<br />coordination</span></li>
-          <li class="flex items-center gap-3 sm:gap-2"><Plane class="size-7 shrink-0" stroke-width="1.5" /><span>Travel<br />assistance</span></li>
+          <li class="flex items-center gap-3 sm:gap-2"><Plane class="size-7 shrink-0" stroke-width="1.5" /><span>Accommodation &<br />local transfers</span></li>
         </ul>
       </div>
     </div>
