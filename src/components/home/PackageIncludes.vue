@@ -15,7 +15,7 @@ const included = [
     <div class="container-page">
       <div class="mx-auto max-w-2xl text-center">
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">MORE THAN A DENTAL APPOINTMENT</p>
-        <h2 id="package-includes-title" class="mt-3 text-3xl text-navy-900 sm:text-4xl">Dental care, accommodation and local travel, coordinated together.</h2>
+        <h2 id="package-includes-title" class="mt-3 text-3xl text-navy-900 sm:text-4xl">Dental care, accommodation and local travel, coordinated together</h2>
         <p class="mt-3 text-sm leading-6 text-muted sm:text-base">You book your flights; we coordinate your accommodation, local transfers, clinic communication and appointments for a smoother stay in Croatia.</p>
       </div>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -27,7 +27,7 @@ const included = [
       </div>
       <div class="mt-6 flex flex-col items-start justify-between gap-4 border border-[#dce5eb] bg-white p-5 sm:flex-row sm:items-center sm:p-6">
         <div class="max-w-2xl">
-          <h3 class="text-lg font-semibold text-navy-900">A plan made for you, not a one-size-fits-all package.</h3>
+          <h3 class="text-lg font-semibold text-navy-900">A plan made for you, not a one-size-fits-all package</h3>
           <p class="mt-1 text-sm leading-6 text-muted">After reviewing your information, we explain the proposed care, what is included, and the agreed deposit and balance terms before you commit.</p>
         </div>
         <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
