@@ -2,7 +2,7 @@ import { isValidPhoneNumber, type CountryCode } from 'libphonenumber-js'
 
 export const MAX_FILE_BYTES = 5 * 1024 * 1024
 export const MAX_FILES = 5
-export const MAX_TOTAL_FILE_BYTES = 8 * 1024 * 1024
+export const MAX_TOTAL_FILE_BYTES = 20 * 1024 * 1024
 export const ACCEPTED_EXTENSIONS = ['pdf', 'jpg', 'jpeg', 'png', 'webp', 'dcm', 'dicom']
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
