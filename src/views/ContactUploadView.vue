@@ -49,7 +49,7 @@ async function onSubmit() {
       <header class="text-center">
         <h1 class="text-3xl text-navy-900 sm:text-4xl">Share Your Dental Information</h1>
         <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
-          If you have a treatment plan or dental records, you can share them here — but they are optional. Tell us what you are looking for and add any travel preferences. We will review your inquiry and aim to reply within 1–3 business days with a personalized proposal outlining estimated pricing and package inclusions. Any treatment recommendation must be confirmed by a dental professional.
+          If you have a treatment plan or dental records, you can share them here, but they are optional. Tell us what you are looking for and add any travel preferences. We will review your inquiry and aim to reply within 1–3 business days with a personalized proposal outlining estimated pricing and package inclusions. Any treatment recommendation must be confirmed by a dental professional.
         </p>
       </header>
 
