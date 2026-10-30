@@ -10,7 +10,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">PATIENT STORIES</p>
         <h2 id="patient-stories-title" class="mt-3 text-3xl leading-tight text-navy-900 sm:text-4xl">Real experiences, in their own words</h2>
         <p class="mt-4 text-sm leading-6 text-muted sm:text-base">
-          Choosing dental care abroad is a personal decision. We believe it helps to hear directly from people who have experienced the journey — from their first conversation to their time in Croatia.
+          Choosing dental care abroad is a personal decision. We believe it helps to hear directly from people who have experienced the journey, from their first conversation to their time in Croatia.
         </p>
       </div>
 
