@@ -13,10 +13,10 @@ import BaseButton from '@/components/ui/BaseButton.vue'
       <div class="max-w-2xl">
         <p class="text-[11px] font-semibold tracking-[0.16em] text-navy-900">DENTAL CARE & TRAVEL IN CROATIA</p>
         <h1 class="mt-4 max-w-2xl text-4xl leading-[1.02] text-navy-900 sm:text-5xl lg:text-[3.65rem] xl:text-[4rem]">
-          Your smile Our priority
+          Your Smile, Our Priority.
         </h1>
         <p class="mt-5 max-w-xl text-base leading-7 text-navy-800 sm:text-lg">
-          Combine your dental care with a well-organized stay in Croatia. We coordinate your clinic appointments, accommodation and local transfers, so you can focus on your treatment and enjoy more peace of mind while you’re here. You book your flights; we help take care of the rest.
+          Plan your dental treatment and your stay in Croatia with one point of contact. We coordinate communication with dental providers, appointments, accommodation and local transfers — while your dentist guides all clinical decisions. You book your flights; we help organize the rest.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
@@ -29,7 +29,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           fetchpriority="high"
         />
         <ul class="mt-9 grid max-w-lg grid-cols-1 gap-3 text-sm font-medium leading-5 text-navy-900 sm:grid-cols-3 sm:gap-5 sm:text-xs">
-          <li class="flex items-center gap-3 sm:gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Personalized<br />treatment guidance</span></li>
+          <li class="flex items-center gap-3 sm:gap-2"><Stethoscope class="size-7 shrink-0" stroke-width="1.5" /><span>Dentist-led<br />treatment decisions</span></li>
           <li class="flex items-center gap-3 sm:gap-2"><Users class="size-7 shrink-0" stroke-width="1.5" /><span>Clinic & appointment<br />coordination</span></li>
           <li class="flex items-center gap-3 sm:gap-2"><Plane class="size-7 shrink-0" stroke-width="1.5" /><span>Accommodation &<br />local transfers</span></li>
         </ul>
