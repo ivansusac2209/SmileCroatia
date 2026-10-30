@@ -126,7 +126,7 @@ function onSubmit() {
           </div>
         </div>
 
-        <p class="mt-6 text-xs leading-5 text-muted">Not sure about your treatment details yet? That is okay — you can still send an inquiry with the information you have.</p>
+        <p class="mt-6 text-xs leading-5 text-muted">Not sure about your treatment details yet? That is okay. You can still send an inquiry with the information you have.</p>
         <div class="mt-5 flex justify-end">
           <BaseButton type="submit" class="w-full sm:w-auto">Continue <ArrowRight class="size-4" /></BaseButton>
         </div>
