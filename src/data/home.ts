@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/8727478/pexels-photo-8727478.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Natural close-up of a smiling woman showing her teeth',
+    image: 'https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dental implant model showing a replacement tooth and implant',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://images.pexels.com/photos/18505360/pexels-photo-18505360.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Warm close-up portrait of a woman with a natural smile',
+    image: 'https://images.pexels.com/photos/6627601/pexels-photo-6627601.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dental tooth models displayed for restorative treatment planning',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://images.pexels.com/photos/16002544/pexels-photo-16002544.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Close-up portrait of a smiling woman',
+    image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist helping a patient explore dental veneer options',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: 'https://images.pexels.com/photos/33801241/pexels-photo-33801241.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Woman smiling naturally outdoors in bright light',
+    image: 'https://images.pexels.com/photos/34683936/pexels-photo-34683936.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Smiling patient in a bright modern dental clinic',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
