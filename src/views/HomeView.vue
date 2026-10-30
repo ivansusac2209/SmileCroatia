@@ -23,11 +23,11 @@ const faqs = [
 
 <template>
   <HeroSection />
-  <BeforeAfterGallery />
+  <StatsStrip />
   <FeaturedPackages />
   <PackageIncludes />
   <HowItWorks />
-  <StatsStrip />
+  <BeforeAfterGallery />
   <PartnerClinics />
   <section id="faq" class="scroll-mt-24 border-t border-line bg-white py-10 lg:py-14" aria-labelledby="faq-title">
     <div class="container-page grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
