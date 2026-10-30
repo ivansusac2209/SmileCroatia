@@ -16,7 +16,7 @@ const transformations = [
     <div class="container-page">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-xs font-semibold tracking-[0.17em] text-sky-700">SMILE TRANSFORMATIONS</p>
-        <h2 id="results-title" class="mt-3 text-3xl leading-tight text-navy-900 sm:text-4xl lg:text-5xl">Real examples. Beautifully renewed smiles.</h2>
+        <h2 id="results-title" class="mt-3 text-3xl leading-tight text-navy-900 sm:text-4xl lg:text-5xl">Real examples. Beautifully renewed smiles</h2>
         <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted sm:text-base">Explore examples of before-and-after dental transformations. Every smile and treatment plan is individual, and a qualified dental professional will assess what may be suitable for you.</p>
       </div>
 
@@ -56,7 +56,7 @@ const transformations = [
 
       <div class="mt-7 flex flex-col gap-4 rounded-xl bg-[#f5f8fa] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <div>
-          <h3 class="text-lg font-semibold text-navy-900">Your smile. Your goals. A plan made for you.</h3>
+          <h3 class="text-lg font-semibold text-navy-900">Your smile. Your goals. A plan made for you</h3>
           <p class="mt-1 max-w-2xl text-sm leading-6 text-muted">Share your dental records and goals. We will help coordinate an individual review and explain the next steps before you plan your trip.</p>
         </div>
         <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
