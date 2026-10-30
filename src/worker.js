@@ -97,7 +97,7 @@ async function sendInquiry(request, env) {
   const travelers = String(form.get('travelers') || '').trim().slice(0, 20)
   const travelPreferences = String(form.get('travel_preferences') || '').trim().slice(0, 2000)
 
-  if (!name || !email || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+  if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return json({ error: 'Please provide your name and a valid email address.' }, 400)
   }
 
