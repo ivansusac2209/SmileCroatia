@@ -31,7 +31,7 @@ const transformations = [
             target="_blank"
             rel="noopener noreferrer"
             class="block overflow-hidden bg-[#f8f8f6]"
-            :aria-label="`Open full before-and-after smile transformation gallery — ${item.title}`"
+            :aria-label="`Open full before-and-after smile transformation gallery: ${item.title}`"
           >
             <div
               role="img"
