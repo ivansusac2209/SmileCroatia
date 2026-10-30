@@ -24,7 +24,7 @@ function addFiles(list: FileList | null) {
     }
     const totalSize = [...files.value, file].reduce((sum, item) => sum + item.size, 0)
     if (totalSize > MAX_TOTAL_FILE_BYTES) {
-      errors.value.push('The combined size of your files must be 8 MB or smaller.')
+      errors.value.push('The combined size of your files must be 20 MB or smaller.')
       continue
     }
     files.value = [...files.value, file]
@@ -64,7 +64,7 @@ function formatSize(bytes: number) {
     >
       <Upload class="size-7 text-navy-800" stroke-width="1.5" />
       <span class="mt-3 text-sm font-medium text-navy-900 sm:mt-4">Upload your dental plan or files</span>
-      <span class="mt-2 text-xs text-muted">Drag and drop files here, or click to browse</span>
+      <span class="mt-2 text-xs text-muted">Select up to 5 files at once, or drag and drop them here</span>
       <span class="mt-1 text-xs text-muted">PDF, JPG, PNG, WEBP, DICOM · max 5 files, 8 MB total</span>
     </button>
     <input
