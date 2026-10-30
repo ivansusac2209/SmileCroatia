@@ -16,7 +16,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
           Your Smile, Our Priority
         </h1>
         <p class="mt-5 max-w-xl text-base leading-7 text-navy-800 sm:text-lg">
-          Plan your dental treatment and your stay in Croatia with one point of contact. We coordinate communication with dental providers, appointments, accommodation and local transfers — while your dentist guides all clinical decisions. You book your flights; we help organize the rest.
+          Plan your dental treatment and your stay in Croatia with one point of contact. We coordinate communication with dental providers, appointments, accommodation and local transfers, while your dentist guides all clinical decisions. You book your flights; we help organize the rest.
         </p>
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
