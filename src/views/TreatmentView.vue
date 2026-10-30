@@ -112,7 +112,7 @@ const treatment = computed(() => treatments[String(route.params.slug)] ?? null)
 
     <div class="mt-10 flex flex-col items-start justify-between gap-4 bg-[#f5f8fa] p-6 sm:flex-row sm:items-center sm:p-8">
       <div>
-        <h2 class="text-2xl text-navy-900">Understand your options before you travel.</h2>
+        <h2 class="text-2xl text-navy-900">Understand your options before you travel</h2>
         <p class="mt-2 max-w-2xl text-sm leading-6 text-muted">Send us your questions and any relevant documents. We can help coordinate the next steps with a partner clinic and explain the agreed travel arrangements.</p>
       </div>
       <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
