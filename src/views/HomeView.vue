@@ -6,12 +6,13 @@ import PackageIncludes from '@/components/home/PackageIncludes.vue'
 import HowItWorks from '@/components/home/HowItWorks.vue'
 import StatsStrip from '@/components/home/StatsStrip.vue'
 import PartnerClinics from '@/components/home/PartnerClinics.vue'
+import PatientStories from '@/components/home/PatientStories.vue'
 
 const faqs = [
   { question: 'How do I get started?', answer: 'Send us your dental goals, any treatment plan or records you already have and your travel preferences. We coordinate the next steps and aim to reply within 1–3 business days.' },
   { question: 'How much does a dental trip cost?', answer: 'Every proposal is personalized. Within 1–3 business days, we aim to provide a tailored package outlining the estimated total cost, planned treatment, agreed travel arrangements and a clear breakdown of what is included and excluded. Final treatment recommendations and clinical costs depend on an assessment by a dental professional.' },
   { question: 'What does SmileCroatia organize?', answer: 'We coordinate communication with dental providers, appointment planning, your accommodation and local transfers as part of your dental trip. You book your own flights. Your personalized proposal explains the exact accommodation, transfer arrangements and any other services included in your package.' },
-  { question: 'Do I need to book flights before I receive my proposal?', answer: 'No. Wait until you have reviewed the proposal, confirmed the treatment timeline with the dental provider and agreed on the practical arrangements. Any suggested dates are preferences, not confirmed bookings.' },
+  { question: 'Do I need to book flights before I receive your proposal?', answer: 'No. Wait until you have reviewed the proposal, confirmed the treatment timeline with the dental provider and agreed on the practical arrangements. Any suggested dates are preferences, not confirmed bookings.' },
   { question: 'How does payment work?', answer: 'Your personalized proposal will clearly outline the package price, payment schedule and what is included or excluded. A deposit may be required after you accept the proposal. The amount, due dates, cancellation and refund terms will be provided in writing. Dental treatment payments may follow the clinic’s own terms, as explained in your proposal.' },
   { question: 'What happens if I need to cancel or change my dates?', answer: 'Cancellation and change terms depend on the services booked and the relevant providers’ policies. We will explain the applicable terms, including any non-refundable deposits or supplier costs, before you pay or confirm bookings.' },
   { question: 'How do I know the treatment is right for me?', answer: 'SmileCroatia helps coordinate communication and planning, but does not replace a dentist’s clinical judgment. A qualified dental professional must assess your case, confirm suitability and explain the risks, alternatives, treatment stages and expected results.' },
@@ -28,6 +29,7 @@ const faqs = [
   <PackageIncludes />
   <HowItWorks />
   <BeforeAfterGallery />
+  <PatientStories />
   <PartnerClinics />
   <section id="faq" class="scroll-mt-24 border-t border-line bg-white py-10 lg:py-14" aria-labelledby="faq-title">
     <div class="container-page grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
