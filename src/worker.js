@@ -1,5 +1,5 @@
 const MAX_FILE_SIZE = 5 * 1024 * 1024
-const MAX_TOTAL_FILE_SIZE = 8 * 1024 * 1024
+const MAX_TOTAL_FILE_SIZE = 20 * 1024 * 1024
 const MAX_FILES = 5
 const ALLOWED_TYPES = new Set([
   'image/png',
@@ -68,7 +68,7 @@ async function sendInquiry(request, env) {
   }
 
   const length = Number(request.headers.get('content-length') || 0)
-  if (length > 10 * 1024 * 1024) {
+  if (length > 27 * 1024 * 1024) {
     return json({ error: 'The upload is too large. Please use smaller files.' }, 413)
   }
 
@@ -97,7 +97,7 @@ async function sendInquiry(request, env) {
   const travelers = String(form.get('travelers') || '').trim().slice(0, 20)
   const travelPreferences = String(form.get('travel_preferences') || '').trim().slice(0, 2000)
 
-  if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!name || !email || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
     return json({ error: 'Please provide your name and a valid email address.' }, 400)
   }
 
@@ -118,7 +118,7 @@ async function sendInquiry(request, env) {
     }
     totalFileSize += file.size
     if (totalFileSize > MAX_TOTAL_FILE_SIZE) {
-      return json({ error: 'The combined size of your files must be 8 MB or smaller.' }, 400)
+      return json({ error: 'The combined size of your files must be 20 MB or smaller.' }, 400)
     }
     attachments.push({
       filename: safeFilename(file.name),
@@ -147,7 +147,7 @@ async function sendInquiry(request, env) {
     dentalNeeds || 'Not provided',
     '',
     `Attachments: ${attachments.length}`,
-  ].join('\n')
+  ].join('\\n')
 
   const html = `
     <h2>New inquiry from SmileCroatia</h2>
@@ -160,9 +160,9 @@ async function sendInquiry(request, env) {
       <tr><th align="left">Preferred arrival</th><td>${escapeHtml(preferredArrival || 'Not provided')}</td></tr>
       <tr><th align="left">Preferred departure</th><td>${escapeHtml(preferredDeparture || 'Not provided')}</td></tr>
       <tr><th align="left">Travelers</th><td>${escapeHtml(travelers || 'Not provided')}</td></tr>
-      <tr><th align="left">Travel preferences</th><td>${escapeHtml(travelPreferences || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
-      <tr><th align="left">Message</th><td>${escapeHtml(message || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
-      <tr><th align="left">Dental needs</th><td>${escapeHtml(dentalNeeds || 'Not provided').replace(/\n/g, '<br>')}</td></tr>
+      <tr><th align="left">Travel preferences</th><td>${escapeHtml(travelPreferences || 'Not provided').replace(/\\n/g, '<br>')}</td></tr>
+      <tr><th align="left">Message</th><td>${escapeHtml(message || 'Not provided').replace(/\\n/g, '<br>')}</td></tr>
+      <tr><th align="left">Dental needs</th><td>${escapeHtml(dentalNeeds || 'Not provided').replace(/\\n/g, '<br>')}</td></tr>
       <tr><th align="left">Attachments</th><td>${attachments.length}</td></tr>
     </table>
   `
@@ -191,7 +191,6 @@ async function sendInquiry(request, env) {
 
   const result = await response.json().catch(() => ({}))
   if (!response.ok) {
-    // Keep provider response details out of the public response.
     console.error('Resend rejected an inquiry', response.status, result?.name || result?.statusCode || 'unknown error')
     return json({
       error: response.status === 401 || response.status === 403
