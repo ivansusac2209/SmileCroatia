@@ -17,7 +17,9 @@ import { stats } from '@/data/home'
           class="flex flex-col items-center px-3 text-center"
           :class="{ 'md:border-l md:border-line': i > 0 }"
         >
-          <component :is="stat.icon" class="size-8 text-navy-800" stroke-width="1.25" />
+          <span class="mb-1 flex size-14 items-center justify-center rounded-2xl border border-[#d9e6eb] bg-[#eaf1f4] text-sky-800 shadow-sm sm:size-16">
+            <component :is="stat.icon" class="size-8 sm:size-9" stroke-width="1.8" />
+          </span>
           <p class="mt-3 font-serif text-xl text-navy-900 lg:text-2xl">{{ stat.title }}</p>
           <p class="mt-1 text-sm text-muted">{{ stat.text }}</p>
         </li>
