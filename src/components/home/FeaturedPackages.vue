@@ -16,9 +16,17 @@ import { packages } from '@/data/home'
         </div>
         <RouterLink :to="{ name: 'contact-details' }" class="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-sky-700 hover:text-navy-800">Get My Personalized Proposal <ArrowRight class="size-4" /></RouterLink>
       </div>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <PackageCard v-for="pkg in packages" :key="pkg.title" :pkg="pkg" />
+
+      <div class="-mx-5 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
+        <PackageCard
+          v-for="pkg in packages"
+          :key="pkg.title"
+          :pkg="pkg"
+          class="w-[84%] shrink-0 snap-start sm:w-auto sm:shrink"
+        />
       </div>
+      <p class="mt-1 text-xs text-muted sm:hidden">Swipe to explore all treatments <span aria-hidden="true">→</span></p>
+
       <p class="mt-4 text-xs leading-5 text-muted">All treatment options are subject to an individual assessment by a qualified dental professional. You book your flights separately; accommodation and local transfers are included as outlined in your personalized proposal.</p>
       <div class="mt-6 flex flex-col items-start justify-between gap-3 border border-line bg-white p-5 sm:flex-row sm:items-center">
         <div>
