@@ -7,8 +7,8 @@ import { stats } from '@/data/home'
     <div class="container-page">
       <div class="mx-auto mb-8 max-w-3xl text-center">
         <p class="text-xs font-semibold tracking-[0.16em] text-sky-700">WHY CROATIA</p>
-        <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">Dental care with the ease of a Croatian getaway.</h2>
-        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Depending on the treatment, dental care in Croatia can cost around 30–70% less than comparable treatment in the US or UK. SmileCroatia also coordinates your clinic appointments, accommodation and local transfers, so you can focus on your care and enjoy your stay.</p>
+        <h2 id="why-title" class="mt-3 text-3xl text-navy-900 lg:text-4xl">A dental trip, thoughtfully coordinated</h2>
+        <p class="mt-3 text-sm leading-6 text-muted sm:text-base">Croatia gives international patients the opportunity to explore dental treatment abroad while experiencing a different destination. Depending on the procedure and provider, comparable dental treatment may cost around 30–70% less than in the US or UK. SmileCroatia brings the practical details together by coordinating clinic communication, appointments, accommodation and local transfers.</p>
       </div>
       <ul class="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4">
         <li
@@ -22,7 +22,7 @@ import { stats } from '@/data/home'
           <p class="mt-1 text-sm text-muted">{{ stat.text }}</p>
         </li>
       </ul>
-      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">The 30–70% figure is an indicative comparison of dental treatment costs, not a guaranteed saving on the full trip. Actual prices and savings vary by treatment, clinical needs and provider. Flights are booked separately; your personalized proposal outlines your treatment, accommodation and local transfers.</p>
+      <p class="mx-auto mt-7 max-w-3xl text-center text-xs leading-5 text-muted">The 30–70% figure is an indicative comparison of dental treatment costs only, not a guaranteed saving on the full trip. Actual prices and savings vary by procedure, clinical needs and provider. Flights are booked separately; your personalized proposal outlines the treatment estimate and the accommodation and local transfers included in your arrangements.</p>
     </div>
   </section>
 </template>
