@@ -53,29 +53,29 @@ export interface Package {
 export const packages: Package[] = [
   {
     title: 'Dental Implants',
-    image: 'https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dental implant model showing a replacement tooth and implant',
+    image: 'https://images.pexels.com/photos/5355890/pexels-photo-5355890.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Patient receiving a dental consultation in a bright, modern clinic',
     badge: 'Replacing missing teeth',
     features: ['Options for replacing missing teeth', 'Assessment and treatment stages', 'An individual plan from a dental professional'],
   },
   {
     title: 'Crowns & Bridges',
-    image: 'https://images.pexels.com/photos/6627601/pexels-photo-6627601.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dental tooth models displayed for restorative treatment planning',
+    image: 'https://images.pexels.com/photos/6812429/pexels-photo-6812429.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist discussing treatment options with a patient in a modern clinic',
     badge: 'Restorative dentistry',
     features: ['Restore damaged or weakened teeth', 'Discuss suitable crown and bridge materials', 'Understand the appointments involved'],
   },
   {
     title: 'Dental Veneers',
-    image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Dentist helping a patient explore dental veneer options',
+    image: 'https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Dentist speaking with a patient during a relaxed dental appointment',
     badge: 'Cosmetic dentistry',
     features: ['Explore options for changing tooth shape or colour', 'Discuss suitability and alternatives', 'Set realistic expectations with your dentist'],
   },
   {
     title: 'Smile Makeover',
-    image: 'https://images.pexels.com/photos/34683936/pexels-photo-34683936.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Smiling patient in a bright modern dental clinic',
+    image: 'https://images.pexels.com/photos/19332231/pexels-photo-19332231.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Female dentist providing attentive care to a patient',
     features: ['Explore combined restorative and cosmetic options', 'Discuss your goals and dental health', 'Build a plan around your clinical needs'],
   },
 ]
