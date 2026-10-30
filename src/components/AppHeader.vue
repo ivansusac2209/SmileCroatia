@@ -32,8 +32,7 @@ function isActive(link: (typeof links)[number]) {
         <span class="inline-flex items-center gap-1.5 text-xs font-medium text-navy-900" aria-label="Site language: English"><Globe2 class="size-4" /> EN</span>
         <BaseButton :to="{ name: 'contact-details' }" size="sm">Get My Personalized Proposal <ArrowUpRight class="size-4" /></BaseButton>
       </div>
-      <div class="flex shrink-0 items-center gap-1.5 xl:hidden">
-        <BaseButton :to="{ name: 'contact-details' }" size="sm" class="shrink-0 whitespace-nowrap px-2.5 text-[0.7rem] sm:px-4 sm:text-xs">Get My Personalized Proposal <ArrowUpRight class="size-4" /></BaseButton>
+      <div class="flex shrink-0 items-center xl:hidden">
         <button type="button" class="-mr-2 rounded-full p-2 text-navy-800 transition-colors hover:bg-surface" :aria-expanded="open" aria-controls="mobile-menu" :aria-label="open ? 'Close menu' : 'Open menu'" @click="open = !open">
           <X v-if="open" class="size-6" />
           <Menu v-else class="size-6" />
