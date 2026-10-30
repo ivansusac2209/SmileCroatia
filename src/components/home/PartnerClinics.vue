@@ -25,7 +25,7 @@
             <figcaption class="px-3 py-3 text-sm text-navy-900">Understand your treatment plan</figcaption>
           </figure>
           <figure class="col-span-2 overflow-hidden rounded-md bg-white">
-            <img src="/images/step-travel.jpg" alt="Historic coastal town along Croatia’s Adriatic coast" class="aspect-[2.5/1] w-full object-cover" loading="lazy" />
+            <img src="https://images.pexels.com/photos/33320980/pexels-photo-33320980.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Aerial view of Primošten’s historic peninsula surrounded by the Adriatic Sea" class="aspect-[2.5/1] w-full object-cover" loading="lazy" />
             <figcaption class="flex flex-col gap-1 px-3 py-3 sm:flex-row sm:items-center sm:justify-between">
               <span class="text-sm text-navy-900">Make time for the beauty of the Adriatic</span>
               <span class="text-xs text-muted">Your free time depends on your treatment schedule</span>
