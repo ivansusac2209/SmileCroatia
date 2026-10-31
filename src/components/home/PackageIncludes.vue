@@ -18,13 +18,14 @@ const included = [
         <h2 id="package-includes-title" class="mt-3 text-3xl text-navy-900 sm:text-4xl">Dental care, accommodation and local travel, coordinated together</h2>
         <p class="mt-3 text-sm leading-6 text-muted sm:text-base">You book your flights; we coordinate your accommodation, local transfers, clinic communication and appointments for a smoother stay in Croatia.</p>
       </div>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <article v-for="item in included" :key="item.title" class="border border-line bg-white p-5 sm:p-6">
+      <div class="-mx-5 mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
+        <article v-for="item in included" :key="item.title" class="w-[82%] shrink-0 snap-start border border-line bg-white p-5 sm:w-auto sm:shrink sm:p-6">
           <component :is="item.icon" class="size-7 text-sky-700" stroke-width="1.5" />
           <h3 class="mt-4 font-serif text-xl text-navy-900">{{ item.title }}</h3>
           <p class="mt-2 text-sm leading-6 text-muted">{{ item.text }}</p>
         </article>
       </div>
+      <p class="mt-1 text-xs text-muted sm:hidden">Swipe to explore the included services <span aria-hidden="true">→</span></p>
       <div class="mt-6 flex flex-col items-start justify-between gap-4 border border-[#dce5eb] bg-white p-5 sm:flex-row sm:items-center sm:p-6">
         <div class="max-w-2xl">
           <h3 class="text-lg font-semibold text-navy-900">A plan made for you, not a one-size-fits-all package</h3>
