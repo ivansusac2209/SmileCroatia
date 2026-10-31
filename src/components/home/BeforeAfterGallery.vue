@@ -20,11 +20,11 @@ const transformations = [
         <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted sm:text-base">Explore examples of before-and-after dental transformations. Every smile and treatment plan is individual, and a qualified dental professional will assess what may be suitable for you.</p>
       </div>
 
-      <div class="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      <div class="-mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-auto sm:grid sm:max-w-5xl sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 lg:gap-6">
         <article
           v-for="(item, index) in transformations"
           :key="item.title"
-          class="group overflow-hidden rounded-xl border border-line bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
+          class="group w-[86%] shrink-0 snap-start overflow-hidden rounded-xl border border-line bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md sm:w-auto sm:shrink"
         >
           <a
             :href="galleryImage"
