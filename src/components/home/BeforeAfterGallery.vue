@@ -1,8 +1,21 @@
 <script setup lang="ts">
-import { ArrowRight, ShieldCheck } from 'lucide-vue-next'
+import { ArrowRight, ShieldCheck, X } from 'lucide-vue-next'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
 
 const galleryImage = '/images/Galerija%20transformacija%20osmijeha%20prije%20i%20poslije.png'
+const galleryOpen = ref(false)
+
+function closeGallery() {
+  galleryOpen.value = false
+}
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') closeGallery()
+}
+
+onMounted(() => window.addEventListener('keydown', onKeydown))
+onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
 const transformations = [
   { title: 'Smile restoration', position: '0% 0%' },
@@ -42,7 +55,7 @@ const transformations = [
           </a>
           <div class="flex items-center justify-between gap-3 px-4 py-3.5">
             <h3 class="text-sm font-semibold text-navy-900">{{ item.title }}</h3>
-            <a :href="galleryImage" target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-sky-700 hover:text-navy-900">
+            <button type="button" @click="galleryOpen = true" class="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-sky-700 hover:text-navy-900">
               View gallery <ArrowRight class="size-3.5" />
             </a>
           </div>
