@@ -74,5 +74,27 @@ const transformations = [
         <BaseButton :to="{ name: 'contact-details' }" class="shrink-0">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
       </div>
     </div>
+    <div
+      v-if="galleryOpen"
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-3 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Before-and-after smile transformation gallery"
+      @click.self="closeGallery"
+    >
+      <button
+        type="button"
+        class="absolute right-4 top-4 z-10 inline-flex size-11 items-center justify-center rounded-full bg-white text-navy-900 shadow-lg hover:bg-gray-100"
+        aria-label="Close gallery"
+        @click="closeGallery"
+      >
+        <X class="size-6" />
+      </button>
+      <img
+        :src="galleryImage"
+        alt="Before-and-after dental transformation examples"
+        class="max-h-[88vh] max-w-full rounded-md object-contain"
+      />
+    </div>
   </section>
 </template>
