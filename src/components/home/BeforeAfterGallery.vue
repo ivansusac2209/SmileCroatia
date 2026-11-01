@@ -39,12 +39,11 @@ const transformations = [
           :key="item.title"
           class="group w-[86%] shrink-0 snap-start overflow-hidden rounded-xl border border-line bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md sm:w-auto sm:shrink"
         >
-          <a
-            :href="galleryImage"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block overflow-hidden bg-[#f8f8f6]"
-            :aria-label="`Open full before-and-after smile transformation gallery: ${item.title}`"
+          <button
+            type="button"
+            @click="galleryOpen = true"
+            class="block w-full overflow-hidden bg-[#f8f8f6] text-left"
+            :aria-label="`Open before-and-after smile transformation gallery: ${item.title}`"
           >
             <div
               role="img"
@@ -52,12 +51,12 @@ const transformations = [
               class="aspect-[1.16/1] w-full bg-no-repeat transition-transform duration-300 group-hover:scale-[1.02]"
               :style="{ backgroundImage: `url(${galleryImage})`, backgroundSize: '300% 200%', backgroundPosition: item.position }"
             />
-          </a>
+          </button>
           <div class="flex items-center justify-between gap-3 px-4 py-3.5">
             <h3 class="text-sm font-semibold text-navy-900">{{ item.title }}</h3>
             <button type="button" @click="galleryOpen = true" class="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-sky-700 hover:text-navy-900">
               View gallery <ArrowRight class="size-3.5" />
-            </a>
+            </button>
           </div>
         </article>
       </div>
