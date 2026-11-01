@@ -9,27 +9,27 @@ import BaseButton from '@/components/ui/BaseButton.vue'
       <img src="/images/Osmijesi%20uz%20Jadran%20u%20ordinaciji.png" alt="A patient smiling with her dentist in a modern dental clinic overlooking Croatia’s Adriatic coast" class="h-full w-full object-cover object-center" fetchpriority="high" />
       <div class="absolute inset-0 bg-gradient-to-r from-[#f5f8fa] via-[#f5f8fa]/90 to-[#f5f8fa]/10 lg:via-[#f5f8fa]/55 lg:to-transparent" />
     </div>
-    <div class="container-page relative flex min-h-[540px] w-full min-w-0 max-w-full items-center py-8 sm:py-16 lg:min-h-[500px] lg:py-20">
+    <div class="container-page relative flex min-h-0 w-full min-w-0 max-w-full items-center py-7 sm:min-h-[540px] sm:py-16 lg:min-h-[500px] lg:py-20">
       <div class="w-full min-w-0 max-w-full sm:max-w-2xl">
         <p class="text-[11px] font-semibold tracking-[0.16em] text-navy-900">DENTAL CARE & TRAVEL IN CROATIA</p>
-        <h1 class="mt-4 w-full max-w-full whitespace-normal break-words text-[2.15rem] leading-[1.06] text-navy-900 sm:max-w-2xl sm:text-5xl lg:text-[3.65rem] xl:text-[4rem]">
+        <h1 class="mt-3 w-full max-w-full whitespace-normal break-words text-[2rem] leading-[1.08] text-navy-900 sm:mt-4 sm:max-w-2xl sm:text-5xl lg:text-[3.65rem] xl:text-[4rem]">
           Your Smile, Our Priority
         </h1>
-        <p class="mt-4 w-full max-w-full text-[15px] leading-6 text-navy-800 sm:mt-5 sm:max-w-xl sm:text-lg sm:leading-7">
+        <p class="mt-3 w-full max-w-full text-[15px] leading-[1.55] text-navy-800 sm:mt-5 sm:max-w-xl sm:text-lg sm:leading-7">
           <span class="sm:hidden">Dental care and your stay in Croatia, coordinated through one point of contact. Your dentist guides treatment decisions; we help organize appointments, accommodation and local transfers.</span>
           <span class="hidden sm:inline">Plan your dental treatment and your stay in Croatia with one point of contact. We coordinate communication with dental providers, appointments, accommodation and local transfers, while your dentist guides all clinical decisions. You book your flights; we help organize the rest.</span>
         </p>
-        <div class="mt-5 flex w-full min-w-0 max-w-full flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
+        <div class="mt-4 flex w-full min-w-0 max-w-full flex-col gap-2 sm:mt-7 sm:flex-row sm:gap-3">
           <BaseButton :to="{ name: 'contact-details' }">Get My Personalized Proposal <ArrowRight class="size-4" /></BaseButton>
           <BaseButton :to="{ path: '/', hash: '#dental-treatments' }" variant="outline">Explore Treatments</BaseButton>
         </div>
         <img
           src="/images/Osmijesi%20uz%20Jadran%20u%20ordinaciji.png"
           alt="A woman seated in a dental clinic with her dentist"
-          class="mt-5 block h-[220px] w-full max-w-full rounded-md object-cover object-center sm:mt-7 sm:h-auto sm:max-h-[360px] sm:object-contain lg:hidden"
+          class="mt-4 block h-[205px] w-full max-w-full rounded-md object-cover object-center sm:mt-7 sm:h-auto sm:max-h-[360px] sm:object-contain lg:hidden"
           fetchpriority="high"
         />
-        <ul class="mt-5 grid w-full min-w-0 grid-cols-2 gap-2.5 sm:mt-9 sm:max-w-lg sm:grid-cols-3 sm:gap-5">
+        <ul class="mt-4 grid w-full min-w-0 grid-cols-2 gap-2 sm:mt-9 sm:max-w-lg sm:grid-cols-3 sm:gap-5">
           <li class="flex min-w-0 items-center gap-2.5 rounded-lg border border-[#e1e8ed] bg-white/80 p-3 text-sm font-medium leading-5 text-navy-900 sm:gap-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:text-xs"><Stethoscope class="size-6 shrink-0 sm:size-7" stroke-width="1.5" /><span>Dentist-led<br />treatment decisions</span></li>
           <li class="flex min-w-0 items-center gap-2.5 rounded-lg border border-[#e1e8ed] bg-white/80 p-3 text-sm font-medium leading-5 text-navy-900 sm:gap-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:text-xs"><Users class="size-6 shrink-0 sm:size-7" stroke-width="1.5" /><span>Clinic & appointment<br />coordination</span></li>
           <li class="col-span-2 flex min-w-0 items-center gap-2.5 rounded-lg border border-[#e1e8ed] bg-white/80 p-3 text-sm font-medium leading-5 text-navy-900 sm:col-span-1 sm:gap-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:text-xs"><Plane class="size-6 shrink-0 sm:size-7" stroke-width="1.5" /><span>Accommodation & local transfers</span></li>
